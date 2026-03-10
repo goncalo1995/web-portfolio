@@ -1,8 +1,8 @@
 export const TABS = [
-  { id: 'identity', label: 'Identity', icon: 'User' },
-  { id: 'architectures', label: 'Architectures', icon: 'Layers' },
-  { id: 'ai_lab', label: 'AI Lab', icon: 'Cpu' },
-  { id: 'terminal', label: 'Terminal', icon: 'SquareTerminal' },
-] as const;
+  { id: 'profile', label: 'Profile', icon: 'User' },
+  { id: 'experience', label: 'Experience', icon: 'Briefcase' },
+  { id: 'projects', label: 'Projects', icon: 'Code' },
+  { id: 'stack', label: 'Stack', icon: 'Terminal' }
+]
 
 export type TabId = typeof TABS[number]['id'];

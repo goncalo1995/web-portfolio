@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TABS, type TabId } from '../constants/tabs';
-import { User, Layers, Cpu, SquareTerminal, Sun, Moon } from 'lucide-react';
+import { User, Briefcase, Code, Terminal, Layers, Cpu, SquareTerminal, Sun, Moon } from 'lucide-react';
 
 // Using a custom mapping since we removed User
 const iconMap = {
@@ -9,6 +9,9 @@ const iconMap = {
   Layers,
   Cpu,
   SquareTerminal,
+  Briefcase,
+  Code,
+  Terminal
 };
 
 interface DockProps {

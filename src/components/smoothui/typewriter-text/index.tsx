@@ -36,7 +36,7 @@ const TypewriterText: React.FC<TypewriterTextProps> = ({
 }) => {
   const [displayed, setDisplayed] = useState("");
   const index = useRef(0);
-  const timeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const timeout = useRef<NodeJS.Timeout | null>(null);
   const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
