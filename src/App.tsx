@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import { Dock } from './components/Dock';
+import type { TabId } from './constants/tabs';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [activeTab, setActiveTab] = useState<TabId>('identity');
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="min-h-screen bg-background text-white selection:bg-primary/30">
+      <main className="pb-32 p-8 max-w-7xl mx-auto">
+        {/* Placeholder for content based on activeTab */}
+        <div className="p-8 mt-12 mb-8 bg-surface border border-white/5 rounded-3xl shadow-2xl">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent-yellow bg-clip-text text-transparent mb-4">
+            {activeTab.charAt(0).toUpperCase() + activeTab.slice(1).replace('_', ' ')}
+          </h1>
+          <p className="text-primary">Content for {activeTab} will go here.</p>
+        </div>
+      </main>
+
+      <Dock activeTab={activeTab} onTabChange={setActiveTab} />
+    </div>
+  );
 }
 
-export default App
+export default App;
