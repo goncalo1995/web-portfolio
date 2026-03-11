@@ -9,7 +9,7 @@ const CHEVRON_ANIMATION_DURATION = 0.2;
 
 export interface AccordionItem {
   id: string | number;
-  title: string;
+  title: React.ReactNode;
   content: React.ReactNode;
 }
 
@@ -52,12 +52,12 @@ export default function BasicAccordion({
             <button
               aria-controls={`accordion-content-${item.id}`}
               aria-expanded={isExpanded}
-              className="flex min-h-[44px] w-full items-center justify-between gap-2 bg-background px-4 py-3 text-left transition-colors hover:bg-primary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              className="flex min-h-[44px] w-full items-center justify-between gap-4 bg-background px-4 py-3 text-left transition-colors hover:bg-secondary/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
               id={`accordion-header-${item.id}`}
               onClick={() => toggleItem(item.id)}
               type="button"
             >
-              <h3 className="font-medium">{item.title}</h3>
+              <div className="font-medium flex items-center gap-3">{item.title}</div>
               <motion.div
                 animate={{ rotate: isExpanded ? CHEVRON_ROTATION_DEGREES : 0 }}
                 className="shrink-0"

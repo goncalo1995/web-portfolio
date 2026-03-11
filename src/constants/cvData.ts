@@ -1,4 +1,4 @@
-import { Server, Globe, BrainCircuit, Cloud, Database, Lock } from "lucide-react";
+import { Server, Globe, BrainCircuit, Cloud, ShieldCheck, Cog, Car, Building2, Store, Landmark, MessageSquare, Bot, FileSearch, Briefcase } from "lucide-react";
 
 // --- YOUR PERSONAL CV CONTENT ---
 // This is the only file you'll need to edit in the future to update your CV.
@@ -8,77 +8,85 @@ import { Server, Globe, BrainCircuit, Cloud, Database, Lock } from "lucide-react
 // Cloud Platforms: Google Cloud Platform (GCP), Azure, AWS
 // Backend & DevOps: API Design (REST), Docker, Kubernetes, Quarkus, Node.js
 // Frontend: React, Vue.js
-export const coreTechnologies = {
-    title: "Core Expertise",
-    categories: [
-        {
-            name: "Backend",
-            icon: Server,
-            color: "bg-blue-500",
-            details: {
-                "Frameworks & Tools": ["Java (Spring, Quarkus)", "Node.js (AdonisJs)", "REST APIs", "Docker", "Kubernetes"],
-                "Languages": ["Java", "SQL", "JavaScript/TypeScript"],
-                "Experience": ["Building scalable microservices", "Designing normalized database schemas", "Containerizing applications", "Managing API lifecycles"]
-            }
-        },
-        {
-            name: "Frontend",
-            icon: Globe,
-            color: "bg-green-500",
-            details: {
-                "Frameworks & Tools": ["React", "Vue.js", "Tailwind CSS", "Storybook", "Vite", "Framer Motion"],
-                "Languages": ["TypeScript", "JavaScript", "HTML5", "CSS3"],
-                "Experience": ["Developing complex SPAs", "Building reusable component libraries", "Ensuring web accessibility", "Optimizing for performance"]
-            }
-        },
-        {
-            name: "AI & ML",
-            icon: BrainCircuit,
-            color: "bg-purple-500",
-            details: {
-                "Platforms & Tools": ["Google Dialogflow", "OpenAI API", "LangChain", "Vector Databases"],
-                "Concepts": ["Conversational AI Design", "NLP", "Prompt Engineering", "RAG (Retrieval-Augmented Generation)"],
-                "Experience": ["Deploying enterprise-grade chatbots", "Automating user support flows", "Integrating LLMs into applications"]
-            }
-        },
-        {
-            name: "Cloud & DevOps",
-            icon: Cloud,
-            color: "bg-orange-500",
-            details: {
-                "Platforms": ["Google Cloud Platform (GCP)", "Microsoft Azure", "AWS (EKS)", "Vercel"],
-                "Tools": ["Helm Charts", "GitHub Actions", "Terraform (Basic)", "Grafana"],
-                "Experience": ["Managing CI/CD pipelines", "Deploying to Kubernetes", "Designing serverless architectures", "Certified Cloud Architect"]
-            }
-        },
-        {
-            name: "Data & Analytics",
-            icon: Database,
-            color: "bg-red-500",
-            details: {
-                "Platforms": ["Google BigQuery", "Firestore", "Data Studio", "ETL Processes"],
-                "Tools": ["Google Data Studio", "Firestore", "ETL Processes"],
-                "Experience": ["Building data pipelines", "Designing normalized database schemas", "Containerizing applications", "Managing API lifecycles"]
-            }
-        },
-        {
-            name: "Security",
-            icon: Lock,
-            color: "bg-gray-500",
-            details: {
-                "Platforms": ["Google Cloud Platform (GCP)", "Microsoft Azure", "AWS (EKS)", "Vercel"],
-                "Tools": ["Helm Charts", "GitHub Actions", "Terraform (Basic)", "Grafana"],
-                "Experience": ["Managing CI/CD pipelines", "Deploying to Kubernetes", "Designing serverless architectures", "Certified Cloud Architect"]
-            }
-        },
-    ]
+export const coreExpertise = {
+  title: "Technical Ecosystem",
+  sections: [
+    {
+      id: "backend-data",
+      name: "Backend & Data",
+      icon: Server,
+      color: "#4285F4", // Google Blue
+      summary: "Architecting resilient microservices and high-performance data layers.",
+      stack: {
+        "Languages": ["Java", "TypeScript", "Python", "SQL"],
+        "Frameworks": ["Quarkus", "Spring Boot", "Node.js (AdonisJs)"],
+        "Databases": ["PostgreSQL", "NoSQL (MongoDB, Firestore)", "BigQuery"]
+      },
+      capabilities: [
+        "Scalable Microservices & API Design (REST)",
+        "Database Schema Design & Query Optimization",
+        "Data Pipelines (ETL) & Search Indexing"
+      ]
+    },
+    {
+      id: "cloud-devops",
+      name: "Cloud & DevOps",
+      icon: Cloud,
+      color: "#34A853", // Google Green
+      summary: "Certified Cloud Architect focused on automation, security, and observability.",
+      stack: {
+        "Infrastructure": ["GCP", "AWS (EKS)", "Azure", "Docker", "Kubernetes"],
+        "CI/CD & Tools": ["Jenkins", "GitHub Actions", "Helm", "Git"],
+        "Security": ["Keycloak (IAM)", "OAuth2", "OpenID Connect"]
+      },
+      achievements: true, // Triggers 'CERTIFIED' badge for GCP Architect/Developer
+      capabilities: [
+        "Container Orchestration & Deployment Automation",
+        "Identity & Access Management (IAM)",
+        "System Monitoring (Grafana/Prometheus)"
+      ]
+    },
+    {
+      id: "frontend-mobile",
+      name: "Frontend & Mobile",
+      icon: Globe,
+      color: "#EA4335", // Google Red
+      summary: "Building high-performance, responsive web and mobile experiences.",
+      stack: {
+        "Web": ["React", "Next.js", "TypeScript", "Vue.js"],
+        "Mobile": ["React Native", "Expo"],
+        "Tools": ["Tailwind CSS", "Framer Motion", "Storybook", "Vite"]
+      },
+      capabilities: [
+        "Modern Micro-frontend Architecture",
+        "Reusable Component Libraries",
+        "Performance Optimization & SEO (SSR/ISR)"
+      ]
+    },
+    {
+      id: "ai-intelligence",
+      name: "AI & Intelligence",
+      icon: BrainCircuit,
+      color: "#FBBC05", // Google Yellow
+      summary: "Integrating GenAI and RAG patterns into enterprise workflows.",
+      stack: {
+        "AI/ML": ["Generative AI", "LLMs", "LangChain", "Dialogflow"],
+        "Logic": ["Prompt Engineering", "RAG", "NLP", "Vector Databases"]
+      },
+      capabilities: [
+        "Conversational AI & Chatbot Architecture",
+        "Automated Support & Call Analytics",
+        "Semantic Search & Knowledge Bases"
+      ]
+    }
+  ]
 };
 
 export const cvData = {
     personalInfo: {
         name: "Gonçalo Lascasas Cereja Ribeiro Pereira",
         role: "Fullstack Engineer & AI Enthusiast",
-        imageUrl: "https://files.rochanegra.com/cv/image-cv.jpeg", // Place your image in the `public` folder
+        imageUrl: "https://files.rochanegra.com/cv/me.JPG", // Place your image in the `public` folder
         profile: `I am deeply passionate about developing technological solutions that streamline everyday tasks and enhance efficiency. With a strong focus on problem-solving, I aim to create systems that simplify complex processes and improve user experiences. I have a particular interest in chatbots and automation, and by combining my technical expertise with a keen understanding of user needs, I strive to build intuitive, scalable solutions that drive both productivity and ease of use.`,
         contacts: [
             { type: 'email', value: 'cerejagoncalo@gmail.com', href: 'mailto:cerejagoncalo@gmail.com' },
@@ -199,7 +207,7 @@ export const experienceData = [
     {
         type: 'project', // A specific project from the consulting role
         title: "AI Digital Assistant for Banking",
-        company: "Caixa Geral de Depósitos (CGD)",
+        company: "",
         period: "2021",
         summary: "Architected and delivered a secure, cloud-native conversational AI solution on GCP to serve internal bank agents and call center operators.",
         star: {
@@ -255,60 +263,178 @@ export const experienceData = [
 
 export const workExperience = [
     {
+        id: "feedzai",
         role: "Fullstack Engineer",
         company: "Feedzai",
         period: "2024 - 2025",
         location: "Lisbon, Portugal",
-        // The short, impactful summary for the main view
+        logo: "feedzai.jpeg",
         summary: "Developed features for large-scale fraud detection systems, built UIs using micro frontends, and managed deployments in a high-security Kubernetes environment.",
-        // Detailed breakdown of responsibilities for the expanded view
+        awards: "Internal Hackathon Winner: Built a PoC creating custom fraud detection rules via a chatbot that automatically filled forms for user review and approval.",
         details: [
             {
-                title: "Backend Development (50%)",
-                description: "Engineered and maintained backend services in Java (Quarkus), focusing on improving data processing efficiency and scalability in a high-security environment.",
-                technologies: ["Java", "Quarkus", "Microservices"]
+                id: "feedzai-backend",
+                icon: Server,
+                title: "Backend Development (45%)",
+                description: "Engineered and maintained backend services in Java (Quarkus), focusing on improving data processing efficiency and scalability in a high-security environment. Managed application deployments with Docker.",
+                technologies: ["Java", "Quarkus", "Docker", "Kubernetes", "Helm"]
             },
             {
-                title: "Frontend Development (30%)",
+                id: "feedzai-frontend",
+                icon: Globe,
+                title: "Frontend Development (35%)",
                 description: "Built modern, responsive user interfaces for financial crime monitoring tools using a micro frontend architecture.",
                 technologies: ["React", "TypeScript", "Micro Frontends"]
             },
             {
-                title: "DevOps & Deployment (20%)",
-                description: "Managed the full deployment lifecycle, containerizing applications with Docker and orchestrating them with Helm charts in Kubernetes (AWS EKS), and implementing monitoring with Grafana.",
-                technologies: ["Docker", "Kubernetes", "Helm", "Grafana", "AWS EKS", "Keycloak"]
+                id: "feedzai-iam",
+                icon: ShieldCheck,
+                title: "IAM & Tech Support (10%)",
+                description: "Provided technical support and mentorship to colleagues across the company on Identity and Access Management (IAM) systems and internal problems. Monitored with Grafana.",
+                technologies: ["Keycloak", "IAM", "Grafana", "Prometheus"]
+            },
+            {
+                id: "feedzai-agile",
+                icon: Briefcase,
+                title: "Agile & Planning (10%)",
+                description: "Discussed implementations and participated actively in agile ceremonies and common planning meetings, ensuring feature alignment.",
+                technologies: ["Agile", "Jira"]
             }
         ],
-        // A comprehensive list for the "Key Technologies" footer
-        technologies: ["React", "Java", "Quarkus", "Docker", "Kubernetes", "Helm", "Grafana", "Keycloak"]
+        technologies: ["AWS", "Quarkus (Java)", "React", "TypeScript", "Kubernetes", "Docker"]
     },
     {
+        id: "link",
         role: "Consultant",
         company: "Link Consulting",
-        period: "2019 - 2024 (5 years)",
+        period: "2019 - 2024",
         location: "Lisbon, Portugal",
+        logo: "linkconsulting.jpeg",
         summary: "Architected and developed sophisticated, client-facing AI and full-stack solutions for major clients in finance, public sector, automotive, and logistics.",
-        // For this role, the details are a list of key projects
         details: [
             {
-                title: "Project: AI Digital Assistant for Banking (CGD)",
-                description: "Architected and delivered a secure, cloud-native conversational AI solution on GCP using Dialogflow. Key features included a dynamic knowledge base managed by business users and custom analytics dashboards in Google Data Studio.",
+                id: "link-heyhi",
+                icon: Bot,
+                title: "Project: AI Solutions & Call Analysis (Hey Hi Labs / Salvador Caetano)",
+                role: "AI Solutions Engineer",
+                description: {
+                    challenge: "Needed to efficiently manage and extract structured data from diverse internal processes like call centers and knowledge bases.",
+                    solution: "Developed customized AI solutions including voice recognition analysis, a role-based vector database for document queries, and a multi-language internal chatbot.",
+                    impact: "Streamlined internal data retrieval and automated the structured analysis of call center operations."
+                },
+                technologies: ["AI", "LLMs", "Vector DB", "Speech Recognition", "Prompt Engineering"]
+            },
+            {
+                id: "link-banking",
+                icon: Landmark,
+                title: "Project: AI Digital Assistant for Banking",
+                role: "Full-stack Developer",
+                description: {
+                    challenge: "Bank support teams were overloaded with repetitive banking queries, requiring an automated, scalable solution.",
+                    solution: "Architected a secure, cloud-native conversational AI on GCP integrated with internal Bank systems via ETL, plus custom Data Studio dashboards.",
+                    impact: "Significantly reduced manual query load, provided accurate 24/7 internal support, and empowered business users to safely manage content."
+                },
                 technologies: ["Google Dialogflow", "GCP", "BigQuery", "Data Studio", "ETL"]
             },
             {
-                title: "Project: E-Commerce Platform for Automotive (Hyundai/Carplus)",
-                description: "Led development on the 'Click to Buy' platform, establishing a white-label frontend (Vue.js) and a generic backend (Java/Quarkus) on AWS EKS to rapidly onboard new automotive brands.",
-                technologies: ["Vue.js", "Quarkus", "Java", "AWS EKS", "Storybook"]
+                id: "link-ctt",
+                icon: MessageSquare,
+                title: "Project: 'Fale Connosco' AI Portal (CTT)",
+                role: "Full-stack Developer",
+                description: {
+                    challenge: "CTT required a modern portal to intelligently classify and handle a high volume of varying user inquiries.",
+                    solution: "Engineered a scalable backend API (Adonis.js) integrated with an ML classification model (NeuralShift), alongside an interactive React frontend.",
+                    impact: "Successfully diverted traffic from human operators by providing immediate AI-driven classifications and answers."
+                },
+                technologies: ["React", "Adonis.js", "Node.js", "AWS", "Machine Learning"]
             },
             {
-                title: "Project: 'Fale Connosco' AI Portal (CTT)",
-                description: "Performed full-stack development of a customer support portal, engineering a scalable backend API with AdonisJs (Node.js) and a modern frontend with React.",
-                technologies: ["React", "AdonisJs", "Node.js", "AWS"]
+                id: "link-hyundai",
+                icon: Car,
+                title: "Project: E-Commerce Platform for Automotive (Hyundai)",
+                role: "Full-stack Developer",
+                description: {
+                    challenge: "Needed to quickly launch an online vehicle sales platform, but building custom solutions per brand was costly and slow.",
+                    solution: "Led the development of the 'Click to Buy' platform using a generic Quarkus backend on AWS EKS and established a white-label Vue.js frontend library.",
+                    impact: "Kickstarted Hyundai's digital sales while dramatically reducing the time-to-market for onboarding future automotive brands."
+                },
+                technologies: ["Vue.js", "Storybook", "Quarkus", "Java", "AWS EKS"]
             },
+            {
+                id: "link-carplus",
+                icon: Store,
+                title: "Project: E-commerce Platform for Used Cars (Carplus)",
+                role: "Full-stack Developer",
+                description: {
+                    challenge: "Wanted to replace the legacy website with a modern e-commerce platform focused on lead generation and trade-ins.",
+                    solution: "Rapidly deployed a digital store utilizing the previously established 'White Label' Vue.js component library and generic backend infrastructure.",
+                    impact: "Successfully modernized the shopping experience, resulting in streamlined digital lead generation for used vehicles."
+                },
+                technologies: ["Vue.js", "Storybook", "Framework7", "Quarkus"]
+            },
+            {
+                id: "link-gisla",
+                icon: Cog,
+                title: "Project: Process Management Portal (GISLA)",
+                role: "Full-stack Developer",
+                description: {
+                    challenge: "Client needed to manage dozens of distinct, complex business workflows without building custom UIs for each scenario.",
+                    solution: "Created a comprehensive process portal featuring standalone components that dynamically generate complex forms and validation logic straight from JSON objects.",
+                    impact: "Decreased the deployment time of new business workflows from months to days, creating immense operational flexibility."
+                },
+                technologies: ["Vue.js", "Java", "REST APIs"]
+            },
+            {
+                id: "link-adc",
+                icon: Globe,
+                title: "Project: Chatbot for Abu Dhabi Customs (ADC)",
+                role: "Conversational AI Developer",
+                description: {
+                    challenge: "Citizens needed a seamless way to check customs clearances and book services across web and mobile platforms in two languages.",
+                    solution: "Implemented a responsive Oracle Digital Assistant chatbot in English and Arabic, deeply integrated with ADC's internal legacy systems via APIs.",
+                    impact: "Enhanced accessibility for citizens through 24/7 multi-language support and automated common booking workflows."
+                },
+                technologies: ["Oracle Digital Assistant", "Chatbots", "Integrations"]
+            },
+            {
+                id: "link-dgc",
+                icon: Building2,
+                title: "Project: Consumer Portal Chatbots (DGC & DGAE)",
+                role: "Conversational AI Developer",
+                description: {
+                    challenge: "Consumer websites lacked instant support to help citizens and businesses navigate common catering and property regulations.",
+                    solution: "Deployed multiple specialized chatbots and backoffices allowing administrators to consult conversation histories and manage intent flows.",
+                    impact: "Automated the handling of frequent public inquiries, providing immediate domain-specific assistance at scale."
+                },
+                technologies: ["Chatbots", "Backoffice", "NLP"]
+            },
+            {
+                id: "link-internal",
+                icon: Briefcase,
+                title: "Project: Internal Process Integration",
+                role: "Software Engineer",
+                description: {
+                    challenge: "Internal processes required better synchronization across fragmented collaboration tools within the company.",
+                    solution: "Developed an automated integration pipeline connecting Teams, Edoclink, SharePoint, and Atlas using Angular, Azure Functions, and an Azure Bot.",
+                    impact: "Reduced manual data entry and improved cross-platform workflow harmony for employees."
+                },
+                technologies: ["Angular", "Azure Functions", "Azure Bot", "Teams"]
+            },
+            {
+                id: "link-research",
+                icon: FileSearch,
+                title: "Project: AI & LLM Research Initiative",
+                role: "AI Researcher",
+                description: {
+                    challenge: "Needed to bridge the gap between theoretical AI advancements and practical enterprise implementation.",
+                    solution: "Dedicated intense research to Generative AI, LLMs, and semantic search via Vector Databases, focusing heavily on applied prompt engineering.",
+                    impact: "Gained deep expertise in manipulating LLM outcomes safely, forming the foundation for subsequent enterprise AI feature deployments."
+                },
+                technologies: ["Generative AI", "LLMs", "Vector Databases", "Prompt Engineering"]
+            }
         ],
-        technologies: ["Azure", "Dialogflow", "GCP", "AdonisJs", "React", "Vue.js", "Quarkus"]
-    },
-    // ... Add your other roles (Self-Employed, Erasmus) in this same format.
+        technologies: ["GCP", "Azure", "Dialogflow", "Vue.js", "Quarkus", "Node"]
+    }
 ];
 
 export const workExperienceOld = [
@@ -366,7 +492,7 @@ export const workExperienceOld = [
             {
                 type: 'project_highlight',
                 title: "Conversational AI Architecture (Multi-Cloud)",
-                description: "Architected and delivered secure, scalable conversational AI solutions for clients including a major financial institution (CGD on GCP), public sector agencies (DGAE, DGC), and Abu Dhabi Customs (Oracle Digital Assistant).",
+                description: "Architected and delivered secure, scalable conversational AI solutions for clients including a major financial institution, public sector agencies (DGAE, DGC), and Abu Dhabi Customs (Oracle Digital Assistant).",
                 technologies: ["Google Dialogflow", "GCP", "Oracle Digital Assistant", "Chatbots"]
             },
             {
@@ -447,26 +573,26 @@ export const detailedProjects = [
         technologies: ["Vue.js", "Adonis.js", "Node.js", "AWS", "Machine Learning"],
         tags: ['Public Sector', 'AI/ML', 'Backend', 'Frontend']
     },
-    {
-        client: "Caixa Geral de Depósitos (CGD)",
-        period: "03/2021 – 07/2021",
-        title: "Cloud-Native AI Digital Assistant",
-        // --- NEW STAR METHOD FIELDS ---
-        star: {
-            situation: "The bank's internal support teams were overwhelmed with repetitive queries, leading to long wait times and inefficiency across call centers and internal agency operations.",
-            task: "Design and implement a secure, scalable chatbot on GCP capable of providing instant answers by integrating directly with internal bank systems, while giving business users control over content.",
-            action: "Architected a cloud-native conversational AI using Google Dialogflow and Firestore. Developed ETL processes to sync internal data, and created custom analytics dashboards using Data Studio and BigQuery.",
-            result: "Dramatically reduced the query load on human agents by providing instant 24/7 support. The custom dashboards and dynamic knowledge base empowered the business team with unparalleled agility."
-        },
-        description2: `Implemented a solution for a digital assistant based on Machine Learning and AI technologies, using Google Dialogflow and Google Cloud Platform...`,
-        description: `The solution used Google Dialogflow and Google Cloud Platform, integrating with internal bank systems for dynamic information retrieval. It included an ETL process for updating the chatbot's knowledge base, allowing business users to manage intents and responses. I also created custom monitoring dashboards using Google Data Studio and BigQuery.`,
-        role: "Developer & Technical Support",
-        company: "Link Consulting",
-        summary: "Implemented a cloud-native AI digital assistant on Google Cloud Platform to serve internal bank agents, including custom monitoring dashboards.",
-        technologies: ["Google Dialogflow", "GCP", "ETL", "BigQuery", "Data Studio", "Firestore"], // <-- Added missing tech
-        tags: ['Finance', 'AI/ML', 'Chatbot', 'Cloud'],
-        // ... add a 'star' object
-    },
+    // {
+    //     client: "Caixa Geral de Depósitos (CGD)",
+    //     period: "03/2021 – 07/2021",
+    //     title: "Cloud-Native AI Digital Assistant",
+    //     // --- NEW STAR METHOD FIELDS ---
+    //     star: {
+    //         situation: "The bank's internal support teams were overwhelmed with repetitive queries, leading to long wait times and inefficiency across call centers and internal agency operations.",
+    //         task: "Design and implement a secure, scalable chatbot on GCP capable of providing instant answers by integrating directly with internal bank systems, while giving business users control over content.",
+    //         action: "Architected a cloud-native conversational AI using Google Dialogflow and Firestore. Developed ETL processes to sync internal data, and created custom analytics dashboards using Data Studio and BigQuery.",
+    //         result: "Dramatically reduced the query load on human agents by providing instant 24/7 support. The custom dashboards and dynamic knowledge base empowered the business team with unparalleled agility."
+    //     },
+    //     description2: `Implemented a solution for a digital assistant based on Machine Learning and AI technologies, using Google Dialogflow and Google Cloud Platform...`,
+    //     description: `The solution used Google Dialogflow and Google Cloud Platform, integrating with internal bank systems for dynamic information retrieval. It included an ETL process for updating the chatbot's knowledge base, allowing business users to manage intents and responses. I also created custom monitoring dashboards using Google Data Studio and BigQuery.`,
+    //     role: "Developer & Technical Support",
+    //     company: "Link Consulting",
+    //     summary: "Implemented a cloud-native AI digital assistant on Google Cloud Platform to serve internal bank agents, including custom monitoring dashboards.",
+    //     technologies: ["Google Dialogflow", "GCP", "ETL", "BigQuery", "Data Studio", "Firestore"], // <-- Added missing tech
+    //     tags: ['Finance', 'AI/ML', 'Chatbot', 'Cloud'],
+    //     // ... add a 'star' object
+    // },
     {
         client: "Feedzai",
         role: "Fullstack Engineer",

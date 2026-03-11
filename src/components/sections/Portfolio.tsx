@@ -52,7 +52,7 @@ export const Portfolio = () => {
   }, [filter, persProjectsFormatted]);
 
   return (
-    <div className="space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-500 z-10 relative">
+    <div className="space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-500 z-10 relative mb-12">
       
       {/* Header */}
       <div className="bg-surface p-6 md:p-8 rounded-2xl border border-border space-y-4 shadow-sm z-20 relative mt-4">

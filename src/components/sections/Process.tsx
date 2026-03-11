@@ -66,8 +66,8 @@ export const Process = () => {
               
               {/* Content Card */}
               <div className="flex-1 bg-surface p-6 md:p-8 rounded-2xl border border-border group-hover:border-primary/30 transition-all duration-300 shadow-sm relative overflow-hidden">
-                <div className="absolute -right-10 -top-10 opacity-5 pointer-events-none transform group-hover:scale-110 transition-transform duration-500">
-                   <span className="text-9xl font-bold font-mono text-foreground">{step.id}</span>
+                <div className="absolute -right-3 -top-3 opacity-5 pointer-events-none transform group-hover:scale-110 transition-transform duration-500">
+                   <span className="text-8xl font-bold font-mono text-foreground">{step.id}</span>
                 </div>
                 
                 <div className="flex items-center gap-3 mb-4 md:hidden">
@@ -78,7 +78,7 @@ export const Process = () => {
                 </div>
 
                 <div className="space-y-4 relative z-10">
-                  <h4 className="text-xs font-mono text-muted-foreground hidden md:block tracking-widest">STEP {step.id}</h4>
+                  {/* <h4 className="text-xs font-mono text-muted-foreground hidden md:block tracking-widest">STEP {step.id}</h4> */}
                   <h2 className="text-2xl font-bold text-foreground tracking-wide">{step.title}</h2>
                   <p className="text-foreground/80 leading-relaxed text-base shadow-sm">
                     {step.description}
