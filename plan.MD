@@ -1,51 +1,35 @@
-implement Contextual Call-to-Actions (CTAs).
-
-Tab 1: [Profile] (The Landing Zone)Instead of just a bio, end this section with
-a "Navigation Hub."Component: pnpm dlx shadcn add @smoothui/magnetic-button .CTA
-Content: * "View my Engineering Journey" → Links to [Experience]."Explore
-Technical Stack" → Links to [Stack].UX Idea: Use the Typewriter Text component
-to finish with a prompt like: root@pereira:~$ select_next_module _.
-
-Tab 2: [Experience] (Past Jobs)This is where the Feedzai and Link Consulting
-history lives.Component: pnpm dlx smoothui add expandable-cards.Focus: Deep-dive
-into fraud detection, micro-frontends, and enterprise automation. The current UI
-focus much on images which makes no sense (at most a small icon of each company)
-Many projects i've also done in link consulting, such as:Specialised in
-architecting and developing enterprise-level web applications and AI-powered
-solutions, taking projects from initial concept to cloud deployment. Some key
-accomplishments: Comercial Process Automation: Initiated and engineered an
-internal automation system on Azure integrating Dynamics CRM and SharePoint. The
-solution eliminated manual workflows, significantly reducing project setup time
-and human error. Grupo Salvador Caetano: Delivered a suite of solutions to
-manage their complex, multi-brand operations, including: An enterprise
-e-commerce platform (Quarkus/Java, Vue.js) on AWS that supported rapid brand
-expansion. A process management portal (GISLA) with a dynamic, JSON-driven form
-engine that drastically reduced development overhead. An AI-powered call center
-analytics tool to automate operator evaluation and improve quality assurance.
-Conversational AI: Architected a secure, scalable chatbot on GCP for a major
-bank. A key feature was a dynamic knowledge base that empowered business users
-to manage chatbot content directly, ensuring accuracy and agility. Other
-Projects: Contributed as a full-stack developer on various projects, including
-the CTT customer support portal (AdonisJs, React) and multiple chatbots for
-DGAE, DGC, and Abu Dhabi Customs.
-
-Tab 3: [Projects] (Side Projects & PoCs)By calling this "Projects," you can
-include everything from your AI chatbots to your React Native mobile work and
-Next.js sites.Component: pnpm dlx smoothui add ai-branch for the AI-specific
-ones and glow-hover-cards for the web/mobile ones.
-
-- jobzapp - [jobs.rochanegra.com](http://jobs.rochanegra.com) - OK
-- [airoast.app](http://airoast.app) - OK - falta pagamentos com stripe
-- [rochanegra.com](http://rochanegra.com) OK ~~(need backend hosted )~~
-- notjustflows (mobile app) - update AI model and publish new version if FE
-  needs change
-- 3dfry - OK
-- munzua - OK
-- [rebelco.pt](http://rebelco.pt) - OK
-- [helenacolaco](https://helenacolaco.com) - not yet a nao ser que coloque mais
-  conteudo
-- beta.ausse.pt (need finishes)
-
-Tab 4: [Stack] (Technical Proficiency)A clean grid of your skills and
-certifications.Component: pnpm dlx smoothui add animated-tags.Focus: Clearly
-group by Languages, Cloud (GCP/AWS/Azure), and DevOps (K8s/Docker).
+Here is a proposed organization that balances your high-level engineering
+philosophy with the granular project data required for roles at Revolut or Swiss
+Post.1. The "Recursive" Engineering ProcessYour suggestion to include
+"Challenging Requirements" and "Monitoring" makes the process much more
+sophisticated. It shows you care about Business Value and Product Lifecycle, not
+just JIRA tickets.The Refined 4-Step Loop:STRATEGIZE: Understand and challenge
+requirements to ensure they align with business goals and user needs. DESIGN &
+ARCHITECT: Define the technical strategy, from API design to cloud
+infrastructure (GCP/AWS). IMPLEMENT & ITERATE: Full-stack development with a
+focus on scalability, security, and clean code. MONITOR & OPTIMIZE: Track
+performance (SLAs/KPIs) and gather data to recursively feed back into
+requirement analysis. 2. Navigation Strategy: The "High-Impact Home"Since a
+recruiter's time is limited, putting your "Experience" directly on the
+Home/Profile tab is a brilliant move. It ensures they see your Feedzai and Link
+Consulting pedigree immediately.Tab 1: [Home] (The Professional Profile)Hero:
+Identity and your Google Cloud Certifications. The Process: The 4-step recursive
+loop mentioned above. Experience (The "STAR" Hub): * Feedzai Card: Summary of
+fraud-detection and micro-frontends work. Link Consulting Card: Summary of
+enterprise-level web and AI solutions. Interaction: Clicking "View Details" on a
+card opens a Basic Modal or Expandable Section using the STAR Method (Situation,
+Task, Action, Result) for key projects within that role, alongside the specific
+stack used. Tab 2: [Portfolio] (The Filterable Project Lab)This is where you
+show the breadth of your work.Personal/Freelance Projects: Your React Native
+apps and Next.js sites.Consulting Projects: Yes, definitely include your Link
+Consulting projects here as well! Why? A recruiter might filter for "FinTech" or
+"AI." Even if you did those while at Link, they need to appear in the filtered
+results to prove your expertise in that specific niche. Filtering Logic:Type:
+Professional (Link/Feedzai), Freelance, PoC/Beta. Category: AI/ML, E-commerce,
+Automation, Mobile. 3. Why the STAR Method + Stack worksUsing STAR inside your
+Experience cards is a "cheat code" for interviews. It prepares you for
+behavioral questions before you even walk in the room.Situation: "Grupo Salvador
+Caetano needed to manage complex multi-brand operations." Task: "Create a
+unified e-commerce platform and a dynamic form engine." Action: "Architected a
+white-label solution on AWS EKS using Quarkus and Vue.js." Result: "Drastically
+reduced development overhead and supported rapid brand expansion.

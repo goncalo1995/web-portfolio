@@ -98,8 +98,8 @@ export const Dock = ({ activeTab, onTabChange }: DockProps) => {
                   <motion.div
                     className="relative flex flex-col items-center justify-center w-14 h-14 rounded-xl cursor-pointer"
                     animate={{
-                      y: isHovered ? -4 : 0,
-                      scale: isHovered ? 1.1 : 1,
+                      y: isActive ? -8 : isHovered ? -4 : 0,
+                      scale: isHovered && !isActive ? 1.1 : 1,
                     }}
                     whileTap={{ scale: 0.95 }}
                     transition={{ type: "spring", stiffness: 400, damping: 25 }}
@@ -115,7 +115,7 @@ export const Dock = ({ activeTab, onTabChange }: DockProps) => {
                     
                     {/* Label tooltip */}
                     <AnimatePresence>
-                      {(isHovered) && (
+                      {(isHovered && !isActive) && (
                         <motion.span
                           initial={{ opacity: 0, y: 5 }}
                           animate={{ opacity: 1, y: 0 }}
@@ -136,12 +136,26 @@ export const Dock = ({ activeTab, onTabChange }: DockProps) => {
 
                 {/* Active dot indicator */}
                 {isActive && (
-                  <motion.div
-                    layoutId="activeDot"
-                    className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full"
-                    initial={false}
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                  />
+                //   <motion.div
+                //     layoutId="activeDot"
+                //     className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full"
+                //     initial={false}
+                //     transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                //   />
+                <motion.span
+                    initial={{ opacity: 0, y: 5 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 5 }}
+                    transition={{ duration: 0.15 }}
+                    className={`absolute -bottom-0 px-2 py-1 left-1/2 -translate-x-1/2 text-primary text-[10px] font-medium rounded-md whitespace-nowrap z-50
+                    ${isActive 
+                        ? "" 
+                        : "bg-[#252525] text-gray-300"
+                    }`}
+                >
+                    {tab.label}
+                </motion.span>
+
                 )}
               </motion.div>
             );
