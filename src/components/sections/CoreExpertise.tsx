@@ -12,7 +12,7 @@ export const CoreExpertise = () => {
   return (
     <div className="bg-surface p-4 md:p-6 rounded-2xl border border-border shadow-sm space-y-6">
       <h3 className="text-sm font-mono text-primary tracking-wider uppercase border-b border-border pb-4">
-        <ScrambleHover>// Technical_Ecosystem</ScrambleHover>
+        <ScrambleHover>Technical Skills</ScrambleHover>
       </h3>
 
       {/* 1. Horizontal Navigation: Icon below text on mobile, right on desktop */}

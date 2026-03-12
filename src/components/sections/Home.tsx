@@ -46,7 +46,7 @@ export const Home = ({ onTabChange }: HomeProps) => {
 
       {/* 6. Contact Hub & Resume */}
        <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-surface p-6 rounded-2xl border border-border shadow-sm">
-        <h4 className="text-sm font-mono text-success shrink-0 w-full md:w-auto">{"//"} Connections</h4>
+        <h4 className="text-sm font-mono text-success shrink-0 w-full md:w-auto">Contacts</h4>
         
         <div className="flex flex-col lg:flex-row items-center gap-6 w-full lg:w-auto justify-end flex-wrap">
 
@@ -95,7 +95,7 @@ export const Home = ({ onTabChange }: HomeProps) => {
 
       {/* Soft Skills */}
       <div className="bg-surface p-6 rounded-2xl border border-border shadow-sm">
-        <h4 className="text-accent-yellow font-mono text-sm mb-4">{"//"} Soft_Skills</h4>
+        <h4 className="text-accent-yellow font-mono text-sm mb-4">Soft Skills</h4>
         <div className="flex flex-wrap gap-2">
             {["Teamwork", "Problem Solving", "Time Management", "Critical Thinking", "Project Planning"].map(skill => (
                 <span key={skill} className="text-sm font-medium px-3 py-1.5 rounded-lg bg-secondary text-secondary-foreground border border-border shadow-sm flex items-center gap-1.5">

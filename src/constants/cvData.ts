@@ -86,7 +86,7 @@ export const cvData = {
     personalInfo: {
         name: "Gonçalo Lascasas Cereja Ribeiro Pereira",
         role: "Fullstack Engineer & AI Enthusiast",
-        imageUrl: "https://files.rochanegra.com/cv/me.JPG", // Place your image in the `public` folder
+        imageUrl: "https://files.rochanegra.com/cv/me-cropped.JPG", // Place your image in the `public` folder
         profile: `I am deeply passionate about developing technological solutions that streamline everyday tasks and enhance efficiency. With a strong focus on problem-solving, I aim to create systems that simplify complex processes and improve user experiences. I have a particular interest in chatbots and automation, and by combining my technical expertise with a keen understanding of user needs, I strive to build intuitive, scalable solutions that drive both productivity and ease of use.`,
         contacts: [
             { type: 'email', value: 'cerejagoncalo@gmail.com', href: 'mailto:cerejagoncalo@gmail.com' },
@@ -615,62 +615,70 @@ export const personalProjects = [
     {
         title: "jobzapp",
         status: "live",
+        image: "https://files.rochanegra.com/projects/jobzapp-dashboard.png",
         url: "http://jobs.rochanegra.com",
         description: "AI-powered job application tracking and interview prep platform.",
-        tags: ["AI", "SaaS", "Web"]
+        github: "",
+        tags: ["AI", "SaaS", "Web", "Supabase"]
     },
     {
         title: "airoast.app",
-        status: "wip",
+        status: "live",
         url: "http://airoast.app",
-        description: "AI roasting application. (Payment integration pending).",
-        tags: ["AI", "Web"]
+        description: "AI roasting application.",
+        tags: ["AI", "Web", "Supabase"]
     },
     {
         title: "notjustflows",
         status: "dev",
-        description: "React Native mobile app with AI model integration.",
-        tags: ["Mobile", "AI", "React Native"]
+        url: "https://apps.apple.com/pt/app/notjustflows/id6744860073?l=en-GB",
+        description: "React Native mobile app with AI model integration for generating smart n8n flows.",
+        tags: ["Mobile", "AI", "React Native", "Supabase"]
     },
     {
         title: "rochanegra.com",
-        status: "live",
-        url: "http://rochanegra.com",
-        description: "Corporate web presence.",
-        tags: ["Web", "Corporate"]
+        status: "beta",
+        url: "http://dev.rochanegra.com",
+        description: "Personal life OS, a custom app to manage my task, projects, finances and more!",
+        tags: ["Springboot", "Supabase", "NextJS"]
     },
     {
         title: "3dfry",
         status: "dev",
-        description: "Custom 3D printing service portal.",
-        tags: ["Web", "E-commerce"]
+        url: "https://3dfry-web.vercel.app/",
+        description: "A simple web app to search 3d model files from multiple sources using cursor-based pagination.",
+        tags: ["Web"]
     },
     {
         title: "rebelco.pt",
         status: "live",
-        url: "http://rebelco.pt",
+        url: "https://rebelco.pt",
         description: "E-commerce solution.",
-        tags: ["E-commerce", "Web"]
+        tags: ["Web", "Wordpress", "PHP"]
     },
     {
         title: "munzua",
-        status: "dev",
-        description: "Web application project.",
-        tags: ["Web"]
+        status: "PoC",
+        url: "https://dario.munzua.com",
+        description: "Brand website for a Angolan company",
+        github: "https://github.com/goncalo1995/munzua",
+        tags: ["Web", "NextJS"]
     },
     {
         title: "helenacolaco.com",
-        status: "beta",
+        status: "PoC",
         url: "https://helenacolaco.com",
         description: "Portfolio website.",
-        tags: ["Web", "Portfolio"]
+        tags: ["Supabase", "NextJS"]
     },
     {
         title: "beta.ausse.pt",
-        status: "beta",
+        status: "PoC",
+        url: "https://beta.ausse.pt",
         description: "Beta landing page (pending final finishes).",
-        tags: ["Web", "Landing Page"]
-    }
+        tags: ["InstantDB", "NextJS"]
+    },
+    
 ];
 
 // We need to keep the simple 'experience' section for the timeline view
