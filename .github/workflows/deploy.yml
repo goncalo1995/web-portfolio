@@ -3,19 +3,13 @@ name: Deploy to Cloudflare Pages
 on:
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
+      - v0-next-version
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     name: Build & Deploy
     environment: dev
-    
-    # This job only runs on pushes to the new branch with nextjs
-    if: github.event_name == 'push' && github.ref == 'refs/heads/v0-next-version'
 
     # Add permissions required for the action to report back to GitHub
     permissions:
