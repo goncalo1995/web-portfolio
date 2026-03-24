@@ -14,8 +14,8 @@ jobs:
     name: Build & Deploy
     environment: dev
     
-    # This job only runs on pushes to the main branch
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    # This job only runs on pushes to the new branch with nextjs
+    if: github.event_name == 'push' && github.ref == 'refs/heads/v0-next-version'
 
     # Add permissions required for the action to report back to GitHub
     permissions:
@@ -48,5 +48,5 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: goncalocereja
-          directory: ./dist
+          directory: ./out
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
