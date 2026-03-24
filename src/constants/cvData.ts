@@ -15,68 +15,67 @@ export const coreExpertise = {
       id: "backend-data",
       name: "Backend & Data",
       icon: Server,
-      color: "#4285F4", // Google Blue
-      summary: "Architecting resilient microservices and high-performance data layers.",
+      color: "#4285F4",
+      summary: "Building scalable backend services and data-driven systems.",
       stack: {
         "Languages": ["Java", "TypeScript", "Python", "SQL"],
-        "Frameworks": ["Quarkus", "Spring Boot", "Node.js (AdonisJs)"],
-        "Databases": ["PostgreSQL", "NoSQL (MongoDB, Firestore)", "BigQuery"]
+        "Frameworks": ["Quarkus", "Node.js (AdonisJS)", "Spring Boot"],
+        "Databases": ["PostgreSQL", "Firestore", "MongoDB", "BigQuery"]
       },
       capabilities: [
-        "Scalable Microservices & API Design (REST)",
-        "Database Schema Design & Query Optimization",
-        "Data Pipelines (ETL) & Search Indexing"
+        "API Design & Microservices (REST)",
+        "Data modeling and query optimization",
+        "Event-driven systems (Pub/Sub)"
       ]
     },
     {
       id: "cloud-devops",
       name: "Cloud & DevOps",
       icon: Cloud,
-      color: "#34A853", // Google Green
-      summary: "Certified Cloud Architect focused on automation, security, and observability.",
+      color: "#4285F4",
+      summary: "Deploying and operating systems in cloud-native environments.",
       stack: {
         "Infrastructure": ["GCP", "AWS (EKS)", "Azure", "Docker", "Kubernetes"],
-        "CI/CD & Tools": ["Jenkins", "GitHub Actions", "Helm", "Git"],
-        "Security": ["Keycloak (IAM)", "OAuth2", "OpenID Connect"]
+        "CI/CD & Tools": ["Jenkins", "Azure DevOps", "GitHub Actions", "Git"],
+        "Observability": ["Grafana", "Prometheus"]
       },
-      achievements: true, // Triggers 'CERTIFIED' badge for GCP Architect/Developer
       capabilities: [
-        "Container Orchestration & Deployment Automation",
-        "Identity & Access Management (IAM)",
-        "System Monitoring (Grafana/Prometheus)"
+        "Containerized deployments (Docker/Kubernetes)",
+        "CI/CD pipelines and automation",
+        "Monitoring and system reliability"
       ]
     },
     {
       id: "frontend-mobile",
       name: "Frontend & Mobile",
       icon: Globe,
-      color: "#EA4335", // Google Red
-      summary: "Building high-performance, responsive web and mobile experiences.",
+      color: "#4285F4",
+      summary: "Building modern web and mobile applications with focus on usability and performance.",
       stack: {
         "Web": ["React", "Next.js", "TypeScript", "Vue.js"],
         "Mobile": ["React Native", "Expo"],
-        "Tools": ["Tailwind CSS", "Framer Motion", "Storybook", "Vite"]
+        "Tools": ["Tailwind CSS", "Storybook", "Vite"]
       },
       capabilities: [
-        "Modern Micro-frontend Architecture",
-        "Reusable Component Libraries",
-        "Performance Optimization & SEO (SSR/ISR)"
+        "Component-driven development",
+        "Responsive and cross-platform apps",
+        "Performance optimization and UX focus"
       ]
     },
     {
       id: "ai-intelligence",
       name: "AI & Intelligence",
       icon: BrainCircuit,
-      color: "#FBBC05", // Google Yellow
-      summary: "Integrating GenAI and RAG patterns into enterprise workflows.",
+      color: "#4285F4",
+      summary: "Applying AI in real products, from chatbots to automation and internal tools.",
       stack: {
-        "AI/ML": ["Generative AI", "LLMs", "LangChain", "Dialogflow"],
-        "Logic": ["Prompt Engineering", "RAG", "NLP", "Vector Databases"]
+        "AI/ML": ["LLMs", "Dialogflow", "Generative AI"],
+        "Concepts": ["Prompt Engineering", "RAG", "NLP", "Vector Databases"]
       },
       capabilities: [
-        "Conversational AI & Chatbot Architecture",
-        "Automated Support & Call Analytics",
-        "Semantic Search & Knowledge Bases"
+        "Conversational AI and chatbots",
+        "AI-powered automation and workflows",
+        "Knowledge base and semantic search systems"
       ]
     }
   ]
@@ -87,7 +86,8 @@ export const cvData = {
         name: "Gonçalo Lascasas Cereja Ribeiro Pereira",
         role: "Fullstack Engineer & AI Enthusiast",
         imageUrl: "https://files.rochanegra.com/cv/me-cropped.JPG", // Place your image in the `public` folder
-        profile: `I am deeply passionate about developing technological solutions that streamline everyday tasks and enhance efficiency. With a strong focus on problem-solving, I aim to create systems that simplify complex processes and improve user experiences. I have a particular interest in chatbots and automation, and by combining my technical expertise with a keen understanding of user needs, I strive to build intuitive, scalable solutions that drive both productivity and ease of use.`,
+        // I build robust, secure, and scalable solutions that bridge the gap between complex backend infrastructure and intuitive frontend experiences.
+        profile: `Fullstack engineer with a strong focus on building practical, scalable solutions across web, mobile, and AI-driven systems. I enjoy working on products end-to-end, from architecture decisions to deployment, with a focus on simplicity and real-world impact. Over the years, I’ve worked on everything from e-commerce platforms and internal tools to conversational AI systems, and more recently I’ve been exploring SaaS and mobile development using React Native, Next.js, and Supabase. I’m particularly interested in automation, AI, and building products that remove friction from everyday workflows.`,
         contacts: [
             { type: 'email', value: 'cerejagoncalo@gmail.com', href: 'mailto:cerejagoncalo@gmail.com' },
             // { type: 'phone', value: '+351 91', href: 'tel:+351' },
@@ -269,20 +269,20 @@ export const workExperience = [
         period: "2024 - 2025",
         location: "Lisbon, Portugal",
         logo: "feedzai.jpeg",
-        summary: "Developed features for large-scale fraud detection systems, built UIs using micro frontends, and managed deployments in a high-security Kubernetes environment.",
+        summary: "Worked on backend and frontend systems for a large-scale fraud detection platform in a high-security environment. Developed services in Java (Quarkus), improved data processing flows, and built internal tools using React with a microfrontend approach. Also handled deployments using Docker and Kubernetes (Helm), and supported IAM-related topics (Keycloak) across the team.",
         awards: "Internal Hackathon Winner: Built a PoC creating custom fraud detection rules via a chatbot that automatically filled forms for user review and approval.",
         details: [
             {
                 id: "feedzai-backend",
                 icon: Server,
-                title: "Backend Development (45%)",
+                title: "Backend Development (35%)",
                 description: "Engineered and maintained backend services in Java (Quarkus), focusing on improving data processing efficiency and scalability in a high-security environment. Managed application deployments with Docker.",
                 technologies: ["Java", "Quarkus", "Docker", "Kubernetes", "Helm"]
             },
             {
                 id: "feedzai-frontend",
                 icon: Globe,
-                title: "Frontend Development (35%)",
+                title: "Frontend Development (45%)",
                 description: "Built modern, responsive user interfaces for financial crime monitoring tools using a micro frontend architecture.",
                 technologies: ["React", "TypeScript", "Micro Frontends"]
             },
@@ -301,7 +301,7 @@ export const workExperience = [
                 technologies: ["Agile", "Jira"]
             }
         ],
-        technologies: ["AWS", "Quarkus (Java)", "React", "TypeScript", "Kubernetes", "Docker"]
+        technologies: ["AWS", "Java (Quarkus)", "React", "TypeScript", "Kubernetes", "Docker"]
     },
     {
         id: "link",
@@ -310,7 +310,7 @@ export const workExperience = [
         period: "2019 - 2024",
         location: "Lisbon, Portugal",
         logo: "linkconsulting.jpeg",
-        summary: "Architected and developed sophisticated, client-facing AI and full-stack solutions for major clients in finance, public sector, automotive, and logistics.",
+        summary: "Worked as a fullstack developer across multiple projects in banking, public sector, and automotive. Built and integrated conversational AI solutions using Dialogflow and Google Cloud, developed APIs and web apps (Node.js, React, Vue), and contributed to e-commerce platforms and internal tools. Also worked on system integrations and automation using Azure services, connecting tools like Dynamics, SharePoint, and Teams.",
         details: [
             {
                 id: "link-heyhi",
@@ -355,7 +355,7 @@ export const workExperience = [
                 role: "Full-stack Developer",
                 description: {
                     challenge: "Needed to quickly launch an online vehicle sales platform, but building custom solutions per brand was costly and slow.",
-                    solution: "Led the development of the 'Click to Buy' platform using a generic Quarkus backend on AWS EKS and established a white-label Vue.js frontend library.",
+                    solution: "Helped with the development of the 'Click to Buy' platform using a generic Quarkus backend on AWS EKS and established a white-label Vue.js frontend library.",
                     impact: "Kickstarted Hyundai's digital sales while dramatically reducing the time-to-market for onboarding future automotive brands."
                 },
                 technologies: ["Vue.js", "Storybook", "Quarkus", "Java", "AWS EKS"]
@@ -502,7 +502,7 @@ export const workExperienceOld = [
                 technologies: ["AdonisJs", "Node.js", "React", "Quarkus", "Vue.js"]
             }
         ],
-        technologies: ["Azure", "Dialogflow", "GCP", "AdonisJs", "Node.js", "React", "Vue.js", "Quarkus", "Angular"]
+        technologies: ["Azure", "Dialogflow", "GCP", "AdonisJs", "Node.js", "React", "Vue.js", "Quarkus"]
     },
     // ... add your Self-Employed and other experiences in this same format
 ];

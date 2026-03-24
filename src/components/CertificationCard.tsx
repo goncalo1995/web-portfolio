@@ -21,10 +21,10 @@ export const CertificationCard = ({ cert }: { cert: Certification }) => {
     });
   };
 
-  const isExpired = (expiryDate: string | null | undefined) => {
-    if (!expiryDate) return false;
-    return new Date(expiryDate) < new Date();
-  };
+//   const isExpired = (expiryDate: string | null | undefined) => {
+//     if (!expiryDate) return false;
+//     return new Date(expiryDate) < new Date();
+//   };
 
   return (
     <CometCard
@@ -143,7 +143,7 @@ export const CertificationCard = ({ cert }: { cert: Certification }) => {
                 )}
 
                 {/* Expiry and Credential Info */}
-                <div className="space-y-2 text-xs mb-4">
+                {/* <div className="space-y-2 text-xs mb-4">
                     {cert.expiryDate && (
                     <div className="text-center">
                         <span className="text-zinc-400">
@@ -161,7 +161,7 @@ export const CertificationCard = ({ cert }: { cert: Certification }) => {
                         </span>
                     </div>
                     )}
-                    {/* {cert.credentialId && (
+                    {cert.credentialId && (
                     <div className="text-center">
                         <p className="text-[9px] text-zinc-500 mb-1">
                         Credential ID:
@@ -170,8 +170,8 @@ export const CertificationCard = ({ cert }: { cert: Certification }) => {
                         {cert.credentialId}
                         </p>
                     </div>
-                    )} */}
-                </div>
+                    )}
+                </div> */}
 
                 {/* Verify Credential Button */}
                 {/* {cert.credentialUrl && (

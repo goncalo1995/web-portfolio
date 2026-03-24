@@ -11,7 +11,17 @@ export const CoreExpertise = () => {
 
   return (
     <div className="bg-surface p-4 md:p-6 rounded-2xl border border-border shadow-sm space-y-6">
-      <h3 className="text-sm font-mono text-primary tracking-wider uppercase border-b border-border pb-4">
+      {/* Soft Skills */}
+      <h4 className="text-accent-yellow font-mono text-sm mb-4">Soft Skills</h4>
+      <div className="flex flex-wrap gap-2 pb-4">
+          {["Teamwork", "Problem Solving", "Time Management", "Critical Thinking", "Project Planning"].map(skill => (
+              <span key={skill} className="text-sm font-medium px-3 py-1.5 rounded-lg bg-secondary text-secondary-foreground border border-border shadow-sm flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-success"></span>
+                  {skill}
+              </span>
+          ))}
+      </div>
+      <h3 className="text-sm font-mono text-primary tracking-wider uppercase">
         <ScrambleHover>Technical Skills</ScrambleHover>
       </h3>
 
@@ -37,7 +47,7 @@ export const CoreExpertise = () => {
               >
                 <Icon size={20} />
               </div>
-              <span className={`text-[10px] md:text-xs font-mono uppercase tracking-tighter whitespace-nowrap ${isActive ? 'text-foreground font-bold' : 'text-muted-foreground'}`}>
+              <span className={`text-[10px] md:text-xs font-mono uppercase tracking-tighter whitespace-nowrap ${isActive ? 'text-primary' : 'text-muted-foreground'}`}>
                 {/* On mobile show only first word, on desktop show full name */}
                 <span className="md:hidden">{section.name.split(' ')[0]}</span>
                 <span className="hidden md:inline">{section.name}</span>
@@ -62,11 +72,6 @@ export const CoreExpertise = () => {
             <div className="space-y-2">
               <h4 className="text-xl font-bold text-foreground flex items-center gap-3">
                 {activeData.name}
-                {activeData.achievements && (
-                  <span className="text-[10px] font-mono bg-primary/10 text-primary px-2 py-0.5 rounded-full border border-primary/20">
-                    CERTIFIED
-                  </span>
-                )}
               </h4>
               <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
                 {activeData.summary}

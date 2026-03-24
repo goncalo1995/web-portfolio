@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ScrambleHover from "@/components/smoothui/scramble-hover";
 import { Network, Code2, Search, ShieldCheck, Rocket, Activity } from 'lucide-react';
 
@@ -47,67 +48,64 @@ export const Process = () => {
     }
   ];
 
+  const [activeStep, setActiveStep] = useState<string | null>(null);
+
   return (
-    <div className="space-y-12 animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div className="min-h-[80vh] flex flex-col justify-center space-y-12 animate-in fade-in slide-in-from-bottom-4 duration-500 py-12">
       {/* Header */}
-      <div className="bg-surface p-6 rounded-2xl border border-border space-y-4 mt-4 shadow-sm">
+      <div className="text-center space-y-4 max-w-2xl mx-auto">
         <h3 className="text-sm font-mono text-primary tracking-wider uppercase">
           <ScrambleHover>Engineering Lifecycle</ScrambleHover>
         </h3>
         <p className="text-xl text-foreground/90 leading-relaxed font-light">
-          Software engineering is more than closing JIRA tickets. It's a recursive loop of aligning tech with business value, securing the data, and optimizing through real-world feedback.
+          Software engineering is more than closing tickets. It's a recursive loop of aligning tech with business value, securing data, and optimizing through feedback.
         </p>
       </div>
 
-      
-
-      {/* Process Steps */}
-      <div className="relative">
-        <div className="absolute left-6 md:left-8 top-0 bottom-0 w-px bg-border/50 hidden md:block"></div>
-        
-        <div className="space-y-8 md:space-y-12">
-          {steps.map((step) => (
-            <div key={step.id} className="relative flex flex-col md:flex-row gap-6 md:gap-8 group">
-              {/* Timeline Marker */}
-              <div className="hidden md:flex flex-col items-center mt-2 relative z-10 shrink-0 h-full">
-                <div className="w-16 h-16 rounded-2xl bg-surface border border-border flex items-center justify-center transform group-hover:scale-105 group-hover:border-primary/50 transition-all duration-300 shadow-sm relative overflow-hidden">
-                  <div className="absolute inset-0 bg-secondary/50 z-0 opacity-50"></div>
-                  <div className="relative z-10">{step.icon}</div>
+      {/* Interactive Process Steps */}
+      <div className="max-w-3xl mx-auto w-full space-y-3">
+        {steps.map((step) => {
+          const isActive = activeStep === step.id;
+          return (
+            <div 
+              key={step.id} 
+              className={`group relative overflow-hidden flex flex-col block bg-surface px-6 py-5 rounded-2xl border transition-all duration-300 cursor-pointer 
+                ${isActive ? 'border-primary/50 shadow-md ring-1 ring-primary/20 scale-[1.02] bg-surface/100' : 'border-border hover:border-primary/30 hover:bg-surface/80'}`}
+              onClick={() => setActiveStep(isActive ? null : step.id)}
+              onMouseEnter={() => setActiveStep(step.id)}
+              onMouseLeave={() => setActiveStep(null)}
+            >
+              <div className="flex items-center gap-4 w-full">
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors duration-300 shrink-0 ${isActive ? 'bg-primary/10' : 'bg-secondary/50 group-hover:bg-secondary'}`}>
+                  {step.icon}
+                </div>
+                <div className="flex-1 flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <span className={`text-[10px] font-mono transition-colors tracking-widest uppercase ${isActive ? 'text-primary' : 'text-muted-foreground'}`}>Phase {step.id}</span>
+                    <h2 className="text-lg font-bold text-foreground tracking-tight">{step.title}</h2>
+                  </div>
                 </div>
               </div>
               
-              {/* Content Card */}
-              <div className="flex-1 bg-surface p-6 md:p-8 rounded-2xl border border-border group-hover:border-primary/20 transition-all duration-300 shadow-sm relative overflow-hidden">
-                <div className="absolute -right-4 -top-6 opacity-[0.03] pointer-events-none transform group-hover:scale-110 transition-transform duration-500">
-                   <span className="text-9xl font-bold font-mono text-foreground">{step.id}</span>
-                </div>
-                
-                <div className="flex items-center gap-3 mb-4 md:hidden">
-                    <div className="w-10 h-10 rounded-xl bg-surface border border-border flex items-center justify-center shadow-sm">
-                        {step.icon}
+              <div className={`grid transition-all duration-300 ease-in-out ${isActive ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0'}`}>
+                <div className="overflow-hidden">
+                  <div className="pl-0 sm:pl-16">
+                    <p className="text-muted-foreground leading-relaxed text-sm">
+                      {step.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 pt-4">
+                      {step.tags.map((tag) => (
+                        <span key={tag} className="px-2 py-1 bg-secondary/50 rounded text-[10px] font-mono text-muted-foreground border border-border/50">
+                          {tag}
+                        </span>
+                      ))}
                     </div>
-                    <span className="text-sm font-mono text-muted-foreground">PHASE {step.id}</span>
-                </div>
-
-                <div className="space-y-4 relative z-10">
-                  <h4 className="text-[10px] font-mono text-primary/70 hidden md:block tracking-[0.2em] uppercase">Phase {step.id}</h4>
-                  <h2 className="text-2xl font-bold text-foreground tracking-tight">{step.title}</h2>
-                  <p className="text-muted-foreground leading-relaxed text-sm md:text-base max-w-2xl">
-                    {step.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2 pt-4 border-t border-border/50">
-                    {step.tags.map((tag) => (
-                      <span key={tag} className="px-2 py-1 bg-secondary/30 rounded text-[10px] font-mono text-muted-foreground border border-border/50">
-                        {tag}
-                      </span>
-                    ))}
                   </div>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+          )
+        })}
       </div>
     </div>
   );
