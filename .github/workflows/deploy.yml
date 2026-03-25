@@ -3,9 +3,7 @@ name: Deploy to Cloudflare Pages
 on:
   push:
     branches:
-      - main
-  pull_request:
-    branches:
+      - v0-next-version
       - main
 
 jobs:
@@ -13,9 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Build & Deploy
     environment: dev
-    
-    # This job only runs on pushes to the main branch
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
     # Add permissions required for the action to report back to GitHub
     permissions:
@@ -48,5 +43,5 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: goncalocereja
-          directory: ./dist
+          directory: ./out
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
