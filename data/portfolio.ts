@@ -19,102 +19,112 @@ import {
   Zap,
   Cpu,
   Clock,
+  BrainCircuit,
+  Cloud,
 } from "lucide-react"
 import type { Experience, NavItem, ProcessStep, Project } from "@/types"
 
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Cloud-Native Payment Gateway",
-    description: "Enterprise-scale payment processing system handling 10M+ daily transactions",
-    challenge:
-      "Legacy monolithic payment system causing 15% transaction failures during peak hours, with scaling issues and maintenance overhead.",
-    solution:
-      "Architected a microservices-based payment gateway on GKE with auto-scaling, circuit breakers, and real-time fraud detection using Cloud ML.",
-    stack: ["GCP", "Kubernetes", "Node.js", "Redis", "BigQuery", "Pub/Sub"],
-    category: "cloud",
-    images: [
-      "https://files.rochanegra.com/projects/jobzapp-dashboard.png?height=600&width=800&text=Architecture+Overview",
-      "/placeholder.svg?height=600&width=800&text=Dashboard+View",
-      "https://files.rochanegra.com/projects/jobzapp-dashboard.png?height=600&width=800&text=Metrics+Panel",
-    ],
-    link: "#",
+    title: "Jobzapp",
+    description: "AI-powered ecosystem for automated job tracking and interview intelligence.",
+    challenge: "Job seekers struggle with fragmented application tracking and lack personalized, data-driven preparation for specific role requirements.",
+    solution: "Built an integrated SaaS platform leveraging AI to analyze job descriptions, track applications in real-time, and generate custom interview prep modules using Supabase for high-performance data handling.",
+    stack: ["NextJS", "Supabase", "OpenAI", "Tailwind"],
+    category: "SaaS",
+    hasAI: true,
+    status: "live",
+    images: ["https://files.rochanegra.com/projects/jobzapp-dashboard.png"],
+    link: "http://jobs.rochanegra.com",
   },
   {
     id: 2,
-    title: "Real-time Analytics Dashboard",
-    description: "Live data visualization platform processing 500K events/second",
-    challenge: "Business stakeholders needed real-time insights but existing batch processing had 6-hour delays.",
-    solution:
-      "Built streaming data pipeline with Apache Beam on Dataflow, feeding a React dashboard with WebSocket updates.",
-    stack: ["React", "TypeScript", "Dataflow", "BigQuery", "WebSocket", "D3.js"],
-    category: "fullstack",
-    images: [
-      "/placeholder.svg?height=600&width=800&text=Dashboard+Main",
-      "/placeholder.svg?height=600&width=800&text=Real-time+Charts",
-    ],
-    github: "#",
+    title: "AIRoast.app",
+    description: "Viral AI validation tool that 'roasts' startups and business ideas to find flaws.",
+    challenge: "Entrepreneurs often operate in echo chambers and need brutally honest, instant feedback on their business models before investing capital.",
+    solution: "Developed a lightweight, high-traffic web app using LLM logic to deconstruct business pitches and provide critical analysis, optimized for viral sharing and low-latency responses.",
+    stack: ["NextJS", "Supabase", "OpenAI", "Edge Functions"],
+    category: "SaaS",
+    hasAI: true,
+    status: "live",
+    link: "http://airoast.app",
+    images: ["https://files.rochanegra.com/projects/airoast-dashboard.png"],
   },
   {
     id: 3,
-    title: "Infrastructure as Code Platform",
-    description: "Self-service cloud provisioning with GitOps workflows",
-    challenge: "Dev teams waiting 2+ weeks for infrastructure requests, creating bottlenecks and shadow IT.",
-    solution:
-      "Created Terraform modules with GitHub Actions, enabling self-service provisioning with compliance guardrails.",
-    stack: ["Terraform", "GitHub Actions", "GCP", "Python", "Go", "OPA"],
-    category: "devops",
-    images: [
-      "/placeholder.svg?height=600&width=800&text=GitOps+Flow",
-      "/placeholder.svg?height=600&width=800&text=Portal+UI",
-      "/placeholder.svg?height=600&width=800&text=Approval+Workflow",
-    ],
+    title: "NotJustFlows",
+    description: "Mobile-first AI agent that generates complex n8n automation workflows.",
+    challenge: "Creating sophisticated low-code automations (n8n) is time-consuming and requires deep knowledge of node structures and JSON transformations.",
+    solution: "Architected a React Native mobile application integrated with custom AI models to translate natural language prompts into ready-to-import n8n workflow JSONs.",
+    stack: ["React Native", "Supabase", "AI Models", "Expo"],
+    category: "Mobile",
+    status: "dev",
+    link: "https://apps.apple.com/pt/app/notjustflows/id6744860073?l=en-GB",
+    images: ["https://files.rochanegra.com/projects/notjustflows-dashboard.png"],
   },
   {
     id: 4,
-    title: "ML-Powered Fraud Detection",
-    description: "Real-time fraud scoring reducing false positives by 60%",
-    challenge:
-      "Rule-based fraud detection flagging legitimate transactions, causing customer friction and support overhead.",
-    solution:
-      "Deployed ensemble ML models on Vertex AI with feature store for real-time inference under 50ms latency.",
-    stack: ["Vertex AI", "Python", "TensorFlow", "BigQuery ML", "Cloud Functions"],
-    category: "ai",
-    images: [
-      "/placeholder.svg?height=600&width=800&text=Model+Architecture",
-      "/placeholder.svg?height=600&width=800&text=Performance+Metrics",
-    ],
+    title: "Rocha Negra Life OS",
+    description: "Comprehensive Personal Operating System for task, finance, and knowledge management.",
+    challenge: "Off-the-shelf tools lack the flexibility to implement a unified PARA-method organization alongside custom financial tracking and private data storage.",
+    solution: "Engineered a private enterprise-grade Life OS using a Spring Boot backend and NextJS frontend, centralizing personal productivity and encrypted financial data.",
+    stack: ["Springboot", "NextJS", "Supabase", "PostgreSQL"],
+    category: "SaaS",
+    status: "beta",
+    link: "http://dev.rochanegra.com",
+    images: ["https://files.rochanegra.com/projects/rochanegra-life-os-dashboard.png"],
   },
   {
     id: 5,
-    title: "Multi-Region Database Architecture",
-    description: "Globally distributed database with 99.999% uptime SLA",
-    challenge: "Single-region database causing latency issues for global users and lacking disaster recovery.",
-    solution: "Implemented Cloud Spanner with custom replication policies and automated failover procedures.",
-    stack: ["Cloud Spanner", "Go", "gRPC", "Terraform", "Cloud Monitoring"],
-    category: "cloud",
-    images: [
-      "/placeholder.svg?height=600&width=800&text=Global+Architecture",
-      "/placeholder.svg?height=600&width=800&text=Replication+Map",
-      "/placeholder.svg?height=600&width=800&text=Failover+Dashboard",
-    ],
+    title: "Rebelco.pt",
+    description: "High-performance digital catalog for advanced industrial and ballistic materials.",
+    challenge: "Managing a complex inventory of hundreds of specialized materials with distinct technical specifications and data sheets in a searchable format.",
+    solution: "Designed and deployed a custom WordPress/PHP catalog system with advanced filtering and optimized asset delivery for heavy technical documentation.",
+    stack: ["WordPress", "PHP", "JavaScript", "MySQL"],
+    category: "Web",
+    status: "live",
+    link: "https://rebelco.pt",
+    images: ["https://files.rochanegra.com/projects/rebelco-dashboard.png"],
   },
   {
     id: 6,
-    title: "Developer Portal & API Gateway",
-    description: "Unified API management serving 200+ internal and external consumers",
-    challenge: "API sprawl with inconsistent documentation and no rate limiting causing system instability.",
-    solution:
-      "Built centralized API gateway with Apigee, developer portal with Next.js, and automated API documentation.",
-    stack: ["Apigee", "Next.js", "GraphQL", "OpenAPI", "Kong", "PostgreSQL"],
-    category: "fullstack",
-    images: [
-      "/placeholder.svg?height=600&width=800&text=Portal+Home",
-      "/placeholder.svg?height=600&width=800&text=API+Documentation",
-    ],
-    link: "#",
+    title: "Munzua",
+    description: "Strategic brand presence and digital hub for an Angolan corporate group.",
+    challenge: "Establishing a modern, fast-loading digital identity in a market where mobile performance and data efficiency are critical.",
+    solution: "Developed a clean, SEO-optimized NextJS site focusing on high performance and international accessibility standards.",
+    stack: ["NextJS", "TypeScript", "Framer Motion"],
+    category: "Web",
+    status: "live",
+    github: "https://github.com/goncalo1995/munzua",
+    link: "https://munzua.com",
+    images: ["https://files.rochanegra.com/projects/munzua-dashboard.png"],
   },
-]
+  {
+    id: 7,
+    title: "Helena Colaço",
+    description: "Digital gallery and administrative CMS for a contemporary visual artist.",
+    challenge: "The artist required a minimalist aesthetic that didn't compromise on powerful back-office management for artwork collections and subscribers.",
+    solution: "Built a custom Headless CMS solution using NextJS and Supabase, allowing seamless management of high-resolution media and automated subscriber newsletters.",
+    stack: ["NextJS", "Supabase", "PostgreSQL", "Cloudinary"],
+    category: "Web",
+    status: "live",
+    link: "https://helenacolaco.com",
+    images: ["https://files.rochanegra.com/projects/helenacolaco-dashboard.png"],
+  },
+  {
+    id: 8,
+    title: "Ausse",
+    description: "Real Estate SaaS for instant, professional property landing page generation.",
+    challenge: "Real estate agents need to generate high-quality, unique landing pages for properties in seconds, not hours.",
+    solution: "Prototyped a multi-tenant SaaS using InstantDB for real-time state synchronization, enabling agents to deploy property sites instantly with one-click templates.",
+    stack: ["NextJS", "InstantDB", "React", "Tailwind"],
+    category: "SaaS",
+    status: "PoC",
+    link: "https://beta.ausse.pt",
+    images: ["https://files.rochanegra.com/projects/ausse-dashboard.png"],
+  },
+];
 
 export const experiences: Experience[] = [
   {
@@ -124,7 +134,7 @@ export const experiences: Experience[] = [
     period: "2024 — 2025",
     location: "Lisbon, Portugal",
     summary:
-      "Worked on backend and frontend systems for a large-scale fraud detection platform in a high-security environment. Developed services in Java (Quarkus), improved data processing flows, and built internal tools using React with a microfrontend approach. Also handled deployments using Docker and Kubernetes (Helm), and supported IAM-related topics (Keycloak) across the team.",
+      "Worked on backend and frontend systems for a large-scale fraud detection platform in a high-security environment. Developed services in Java (Quarkus), improved data processing flows, and built internal tools using React with a microfrontend approach. Also handled deployments using Docker and Kubernetes, and supported IAM-related topics across the team.",
     awards:
       "Internal Hackathon Winner: Built a PoC creating custom fraud detection rules via a chatbot that automatically filled forms for user review and approval.",
     details: [
@@ -380,6 +390,79 @@ export const processSteps = [
     outcome: "Continuous growth and reliability",
   },
 ];
+
+export const coreExpertise = {
+  title: "Technical Ecosystem",
+  sections: [
+    {
+      id: "ai-intelligence",
+      name: "AI & Intelligence",
+      icon: BrainCircuit,
+      color: "#4285F4",
+      summary: "Applying AI in real products, from chatbots to automation and internal tools.",
+      stack: {
+        "AI/ML": ["LLMs", "Dialogflow", "Generative AI"],
+        "Concepts": ["Prompt Engineering", "RAG", "NLP", "Vector Databases"]
+      },
+      capabilities: [
+        "Conversational AI and chatbots",
+        "AI-powered automation and workflows",
+        "Knowledge base and semantic search systems"
+      ]
+    },
+    {
+      id: "backend-data",
+      name: "Backend & Data",
+      icon: Server,
+      color: "#4285F4",
+      summary: "Building scalable backend services and data-driven systems.",
+      stack: {
+        "Languages": ["Java", "TypeScript", "Python", "SQL"],
+        "Frameworks": ["Quarkus", "Node.js (AdonisJS)", "Spring Boot"],
+        "Databases": ["PostgreSQL", "Firestore", "MongoDB", "BigQuery"]
+      },
+      capabilities: [
+        "API Design & Microservices (REST)",
+        "Data modeling and query optimization",
+        "Event-driven systems (Pub/Sub)"
+      ]
+    },
+    {
+      id: "cloud-devops",
+      name: "Cloud & DevOps",
+      icon: Cloud,
+      color: "#4285F4",
+      summary: "Deploying and operating systems in cloud-native environments.",
+      stack: {
+        "Infrastructure": ["GCP", "AWS (EKS)", "Azure", "Docker", "Kubernetes"],
+        "CI/CD & Tools": ["Jenkins", "Azure DevOps", "GitHub Actions", "Git"],
+        "Observability": ["Grafana", "Prometheus"]
+      },
+      capabilities: [
+        "Containerized deployments (Docker/Kubernetes)",
+        "CI/CD pipelines and automation",
+        "Monitoring and system reliability"
+      ]
+    },
+    {
+      id: "frontend-mobile",
+      name: "Frontend & Mobile",
+      icon: Globe,
+      color: "#4285F4",
+      summary: "Building modern web and mobile applications with focus on usability and performance.",
+      stack: {
+        "Web": ["React", "Next.js", "TypeScript", "Vue.js"],
+        "Mobile": ["React Native", "Expo"],
+        "Tools": ["Tailwind CSS", "Storybook", "Vite"]
+      },
+      capabilities: [
+        "Component-driven development",
+        "Responsive and cross-platform apps",
+        "Performance optimization and UX focus"
+      ]
+    }
+  ]
+};
 
 export const navItems: NavItem[] = [
   { id: "hero", icon: User, label: "Profile" },

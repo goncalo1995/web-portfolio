@@ -36,6 +36,7 @@ import { ProgressBar } from "@/components/portfolio/ProgressBar"
 import ProcessTimeline from "@/components/portfolio/ProcessTimeline"
 import CollaborateIcon from "@/components/portfolio/CollaborateIcon"
 import Link from "next/link"
+import { CoreExpertise } from "@/components/portfolio/CoreExpertise"
 
 const SECTIONS = ["hero", "process", "experience", "projects", "contact"]
 
@@ -247,6 +248,39 @@ function PortfolioContent() {
           </div>
         </section>
 
+
+        {/* ===================== CORE EXPERTISE SECTION ===================== */}
+        <section
+          id="core-expertise"
+          className="min-h-screen px-6 py-20"
+        >
+          <div className="max-w-6xl mx-auto w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <span className="text-xs font-mono uppercase tracking-wider text-amber-300 mb-4 block">
+                {"// "}Core Expertise
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Skills & Capabilities</h2>
+              <p className="text-muted-foreground max-w-xl mx-auto">
+                A comprehensive overview of my skills and core capabilities.
+              </p>
+            </motion.div>
+
+            <motion.div
+              layout
+              className="grid sm:grid-cols-1 lg:grid-cols-1 gap-6"
+            >
+              <AnimatePresence mode="popLayout">
+                <CoreExpertise />
+              </AnimatePresence>
+            </motion.div>
+          </div>
+        </section>
+
         {/* ===================== EXPERIENCE SECTION ===================== */}
         <section
           id="experience"
@@ -339,7 +373,7 @@ function PortfolioContent() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <span className="text-xs font-mono uppercase tracking-wider text-amber mb-4 block">
+              <span className="text-xs font-mono uppercase tracking-wider text-amber-500 mb-4 block">
                 {"// "}Project Lab
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Work (Soon)</h2>
@@ -400,7 +434,7 @@ function PortfolioContent() {
                 ].map((social) => (
                   <MagneticButton
                     key={social.label}
-                    className="p-3 rounded-xl glass hover:bg-secondary transition-colors"
+                    className="p-3 rounded-xl glass hover:bg-secondary transition-colors cursor-pointer"
                     onClick={() => window.open(social.href, "_blank")}
                   >
                     <social.icon className="w-5 h-5" />

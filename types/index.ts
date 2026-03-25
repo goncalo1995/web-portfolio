@@ -7,8 +7,10 @@ export interface Project {
   challenge: string
   solution: string
   stack: string[]
-  category: "cloud" | "fullstack" | "devops" | "ai"
+  category: "Cloud" | "Fullstack" | "DevOps" | "Mobile" | "Web" | "SaaS" | "PoC"
+  hasAI?: boolean
   images: string[]
+  status?: "live" | "dev" | "beta" | "PoC"
   link?: string
   github?: string
 }

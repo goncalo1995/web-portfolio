@@ -5,12 +5,16 @@ import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 import type { Project } from "@/types"
 import Image from "next/image"
+import { Cloud } from "lucide-react"
 
 const categoryColors: Record<Project["category"], string> = {
-  cloud: "text-cloud-blue border-cloud-blue/30",
-  fullstack: "text-cyber-green border-cyber-green/30",
-  devops: "text-amber border-amber/30",
-  ai: "text-purple-400 border-purple-400/30",
+  Cloud: "text-cloud-blue border-cloud-blue/30",
+  Fullstack: "text-cyber-green border-cyber-green/30",
+  DevOps: "text-amber border-amber/30",
+  Mobile: "text-purple-400 border-purple-400/30",
+  Web: "text-purple-400 border-purple-400/30",
+  SaaS: "text-purple-400 border-purple-400/30",
+  PoC: "text-purple-400 border-purple-400/30",
 }
 
 interface ProjectCardProps {
@@ -42,9 +46,15 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
         <div className="aspect-video bg-secondary/50 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent z-10" />
           <div className="absolute inset-0 flex items-center justify-center">
-            <Image src={project.images[0]} alt={project.title} width={800} height={600} className="w-full h-full object-cover" />
+            {project.images?.[0] ? (
+              <Image src={project.images[0]} alt={project.title} width={800} height={600} className="w-full h-full object-cover" />
+            ) : (
+              <div className="w-full h-full bg-gradient-to-br from-cloud-blue/20 to-cyber-green/20 flex items-center justify-center">
+                <Cloud className="w-12 h-12 text-cloud-blue" />
+              </div>
+            )}
           </div>
-          {project.images.length > 1 && (
+          {project.images && project.images.length > 1 && (
             <div className="absolute bottom-2 right-2 z-20 px-2 py-1 rounded-md bg-background/80 text-xs text-muted-foreground">
               {project.images.length} images
             </div>
@@ -56,9 +66,16 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
             <h3 className="font-semibold text-lg group-hover:text-cloud-blue transition-colors line-clamp-2">
               {project.title}
             </h3>
-            <span className={cn("shrink-0 text-xs px-2 py-1 rounded-full border", categoryColors[project.category])}>
-              {project.category}
-            </span>
+            <div className="flex items-center gap-2">
+              <span className={cn("shrink-0 text-xs px-2 py-1 rounded-full border", categoryColors[project.category])}>
+                {project.category}
+              </span>
+              {project.hasAI && (
+                <span className="shrink-0 text-xs px-2 py-1 rounded-full border border-purple-400/30 text-purple-400">
+                  AI
+                </span>
+              )}
+            </div>
           </div>
 
           <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{project.description}</p>

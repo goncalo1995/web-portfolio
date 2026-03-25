@@ -8,10 +8,13 @@ import type { Project } from "@/types"
 import Image from "next/image"
 
 const categoryColors: Record<Project["category"], string> = {
-  cloud: "bg-cloud-blue/10 text-cloud-blue border-cloud-blue/20",
-  fullstack: "bg-cyber-green/10 text-cyber-green border-cyber-green/20",
-  devops: "bg-amber/10 text-amber border-amber/20",
-  ai: "bg-purple-400/10 text-purple-400 border-purple-400/20",
+  Cloud: "bg-cloud-blue/10 text-cloud-blue border-cloud-blue/20",
+  Fullstack: "bg-cyber-green/10 text-cyber-green border-cyber-green/20",
+  DevOps: "bg-amber/10 text-amber border-amber/20",
+  Mobile: "bg-purple-400/10 text-purple-400 border-purple-400/20",
+  Web: "bg-purple-400/10 text-purple-400 border-purple-400/20",
+  SaaS: "bg-purple-400/10 text-purple-400 border-purple-400/20",
+  PoC: "bg-purple-400/10 text-purple-400 border-purple-400/20",
 }
 
 interface ProjectLightboxProps {
