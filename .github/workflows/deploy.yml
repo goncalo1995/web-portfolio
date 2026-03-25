@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - v0-next-version
+      - main
 
 jobs:
   deploy:

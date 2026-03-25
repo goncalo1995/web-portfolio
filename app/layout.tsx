@@ -9,26 +9,40 @@ const _geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono
 export const metadata: Metadata = {
   title: 'Gonçalo Cereja | Fullstack & Cloud Architect',
   description: 'Fullstack & Cloud Architect specializing in enterprise-scale solutions, Google Cloud Platform, and modern fullstack development. Building robust, scalable systems.',
-  generator: 'v0.app',
   keywords: ['Cloud Architect', 'Fullstack Developer', 'GCP', 'Google Cloud', 'DevOps', 'Kubernetes', 'React', 'Node.js'],
-  authors: [{ name: 'Gonçalo Lascasas Cereja Pereira' }],
+  authors: [{ name: 'Gonçalo Lascasas Cereja Ribeiro Pereira' }],
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
+        url: '/favicon-96x96.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: '/favicon-96x96.png',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/favicon-96x96.png',
+        type: 'image/png',
       },
     ],
     apple: '/apple-icon.png',
   },
+  openGraph: {
+      title: 'Gonçalo Cereja | Fullstack & Cloud Architect',
+      description: 'Fullstack & Cloud Architect specializing in enterprise-scale solutions, Google Cloud Platform, and modern fullstack development. Building robust, scalable systems.',
+      images: [{ url: 'https://files.rochanegra.com/cv/me-cropped.JPG', width: 1200, height: 630, alt: 'Gonçalo Cereja | Fullstack & Cloud Architect' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Gonçalo Cereja | Fullstack & Cloud Architect',
+      description: 'Fullstack & Cloud Architect specializing in enterprise-scale solutions, Google Cloud Platform, and modern fullstack development. Building robust, scalable systems.',
+      images: ['https://files.rochanegra.com/cv/me-cropped.JPG'],
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
 }
 
 export const viewport: Viewport = {
