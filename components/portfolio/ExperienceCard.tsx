@@ -1,9 +1,10 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { ArrowRight, Briefcase, ChevronDown } from "lucide-react"
+import { ArrowRight, Briefcase, ChevronDown, Plus } from "lucide-react"
 import { cn } from "@/lib/utils"
 import type { Experience, FeedzaiDetail, LinkProject } from "@/types"
+import { useIsMobile } from "@/hooks/use-mobile"
 
 interface FeedzaiDetailItemProps {
   detail: FeedzaiDetail
@@ -121,6 +122,7 @@ interface ExperienceCardProps {
 
 export function ExperienceCard({ experience, isExpanded, onToggle }: ExperienceCardProps) {
   const [expandedProject, setExpandedProject] = useState<string | null>(null)
+  const isMobile = useIsMobile()
 
   useEffect(() => {
     if (!isExpanded) {
@@ -136,9 +138,11 @@ export function ExperienceCard({ experience, isExpanded, onToggle }: ExperienceC
       >
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-xl bg-cloud-blue/10 flex items-center justify-center shrink-0">
-              <Briefcase className="w-6 h-6 text-cloud-blue" />
-            </div>
+            {!isMobile && (
+              <div className="w-12 h-12 rounded-xl bg-cloud-blue/10 flex items-center justify-center shrink-0">
+                <Briefcase className="w-6 h-6 text-cloud-blue" />
+              </div>
+            )}
             <div>
               <h3 className="font-semibold text-lg">{experience.company}</h3>
               <p className="text-muted-foreground">{experience.role}</p>
@@ -148,10 +152,10 @@ export function ExperienceCard({ experience, isExpanded, onToggle }: ExperienceC
           <div className="text-right">
             <span className="text-sm text-muted-foreground">{experience.period}</span>
             <div className="mt-2 flex justify-end">
-              <ArrowRight
+              <Plus
                 className={cn(
                   "w-5 h-5 text-muted-foreground transition-transform duration-200",
-                  isExpanded && "rotate-90"
+                  isExpanded && "rotate-45"
                 )}
               />
             </div>

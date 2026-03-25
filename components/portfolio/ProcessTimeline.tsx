@@ -11,7 +11,7 @@ export default function ProcessTimeline({ steps }: { steps: ProcessStep[] }) {
     <section className="w-full px-6 max-w-6xl mx-auto">
       <div className="relative">
         {/* Progress line */}
-        <div className="absolute left-4 top-0 bottom-0 w-px bg-white/10" />
+        <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-white/10" />
 
         <div className="space-y-6">
           {steps.map((step, i) => {

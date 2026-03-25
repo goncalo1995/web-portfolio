@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Privacy Policy — Gonçalo Cereja",
-  description: "Privacy policy for goncalocereja.com",
+  description: "Privacy policy for goncalo.pages",
 }
 
 export default function PrivacyPage() {
@@ -31,8 +31,8 @@ export default function PrivacyPage() {
           <section className="space-y-3">
             <h2 className="text-lg font-semibold">Overview</h2>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              This portfolio website (<strong>goncalocereja.com</strong>) is a personal site operated by Gonçalo
-              Cereja. Your privacy matters. This policy explains what information, if any, is collected when you
+              This portfolio website (<strong>goncalo.pages</strong>) is a personal site operated by Gonçalo
+              Lascasas Cereja Ribeiro Pereira. Your privacy matters. This policy explains what information, if any, is collected when you
               visit this site.
             </p>
           </section>

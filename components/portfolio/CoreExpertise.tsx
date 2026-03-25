@@ -37,7 +37,7 @@ export const CoreExpertise = () => {
             <button
               key={section.id}
               onClick={() => setActiveTab(section.id)}
-              className={`flex flex-col md:flex-row items-center gap-2 md:gap-3 p-3 min-w-[90px] md:min-w-fit rounded-md border transition-all duration-300 ${
+              className={`flex flex-col md:flex-row items-center gap-2 md:gap-3 p-3 min-w-[60px] md:min-w-fit rounded-md border transition-all duration-300 ${
                 isActive 
                   ? 'bg-secondary/50 border-primary shadow-[0_0_15px_rgba(66,133,244,0.1)]' 
                   : 'bg-transparent border-transparent hover:bg-secondary/30'
@@ -84,20 +84,20 @@ export const CoreExpertise = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Categorized Technical Stack */}
               <div className="space-y-4">
-                <span className="text-[11px] font-mono text-primary uppercase tracking-widest font-bold">
+                <span className="text-[12px] font-mono text-primary uppercase tracking-widest font-bold">
                   Technical Stack
                 </span>
                 <div className="space-y-4">
                   {Object.entries(activeData.stack).map(([category, items]) => (
                     <div key={category} className="space-y-2">
-                      <span className="text-[9px] font-mono text-muted-foreground uppercase tracking-tight font-semibold">
+                      <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-tight font-semibold">
                         {category}
                       </span>
                       <div className="flex flex-wrap gap-1.5">
                         {items.map((item: string) => (
                           <span 
                             key={item} 
-                            className="text-[11px] px-2 py-1 rounded-md bg-secondary/50 border border-border text-foreground hover:border-primary/40 transition-colors"
+                            className="text-[12px] px-2 py-1 rounded-md bg-secondary/50 border border-border text-foreground hover:border-primary/40 transition-colors"
                           >
                             {item}
                           </span>
@@ -110,12 +110,12 @@ export const CoreExpertise = () => {
 
               {/* Capability List */}
               <div className="space-y-4">
-                <span className="text-[11px] font-mono text-primary uppercase tracking-widest font-bold">
+                <span className="text-[12px] font-mono text-primary uppercase tracking-widest font-bold">
                   Core Capabilities
                 </span>
-                <ul className="space-y-3">
+                <ul className="space-y-3 mt-2">
                   {activeData.capabilities.map((cap) => (
-                    <li key={cap} className="text-xs text-muted-foreground flex items-start gap-3 group">
+                    <li key={cap} className="text-sm text-muted-foreground flex items-start gap-3 group">
                       <span className="text-primary mt-0.5 group-hover:translate-x-1 transition-transform">▹</span> 
                       <span className="leading-normal">{cap}</span>
                     </li>

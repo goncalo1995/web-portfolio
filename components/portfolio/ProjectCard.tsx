@@ -44,7 +44,7 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
 
       <div className="relative glass rounded-xl overflow-hidden">
         <div className="aspect-video bg-secondary/50 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-card/10 to-transparent z-10" />
           <div className="absolute inset-0 flex items-center justify-center">
             {project.images?.[0] ? (
               <Image src={project.images[0]} alt={project.title} width={800} height={600} className="w-full h-full object-cover" />

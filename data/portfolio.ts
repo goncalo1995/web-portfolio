@@ -30,13 +30,18 @@ export const projects: Project[] = [
     title: "Jobzapp",
     description: "AI-powered ecosystem for automated job tracking and interview intelligence.",
     challenge: "Job seekers struggle with fragmented application tracking and lack personalized, data-driven preparation for specific role requirements.",
-    solution: "Built an integrated SaaS platform leveraging AI to analyze job descriptions, track applications in real-time, and generate custom interview prep modules using Supabase for high-performance data handling.",
+    solution: "Built an integrated SaaS platform leveraging AI to analyze job descriptions, track applications, and generate custom interview prep modules using Supabase for high-performance data handling.",
     stack: ["NextJS", "Supabase", "OpenAI", "Tailwind"],
     category: "SaaS",
     hasAI: true,
     status: "live",
-    images: ["https://files.rochanegra.com/projects/jobzapp-dashboard.png"],
+    images: [
+      "https://files.rochanegra.com/projects/jobzapp-home.png",
+      "https://files.rochanegra.com/projects/jobzapp-dashboard-1.png",
+      "https://files.rochanegra.com/projects/jobzapp-blog.png"
+    ],
     link: "http://jobs.rochanegra.com",
+    github: "https://github.com/goncalo1995/jobzapp"
   },
   {
     id: 2,
@@ -44,25 +49,29 @@ export const projects: Project[] = [
     description: "Viral AI validation tool that 'roasts' startups and business ideas to find flaws.",
     challenge: "Entrepreneurs often operate in echo chambers and need brutally honest, instant feedback on their business models before investing capital.",
     solution: "Developed a lightweight, high-traffic web app using LLM logic to deconstruct business pitches and provide critical analysis, optimized for viral sharing and low-latency responses.",
-    stack: ["NextJS", "Supabase", "OpenAI", "Edge Functions"],
+    stack: ["NextJS", "Supabase", "OpenRouter", "Edge Functions"],
     category: "SaaS",
     hasAI: true,
-    status: "live",
+    status: "beta",
     link: "http://airoast.app",
-    images: ["https://files.rochanegra.com/projects/airoast-dashboard.png"],
+    images: [
+      "https://files.rochanegra.com/projects/ai-roast-home.png",
+      "https://files.rochanegra.com/projects/ai-roast-blog.png",
+      "https://files.rochanegra.com/projects/ai-roast-report.png"
+    ],
   },
-  {
-    id: 3,
-    title: "NotJustFlows",
-    description: "Mobile-first AI agent that generates complex n8n automation workflows.",
-    challenge: "Creating sophisticated low-code automations (n8n) is time-consuming and requires deep knowledge of node structures and JSON transformations.",
-    solution: "Architected a React Native mobile application integrated with custom AI models to translate natural language prompts into ready-to-import n8n workflow JSONs.",
-    stack: ["React Native", "Supabase", "AI Models", "Expo"],
-    category: "Mobile",
-    status: "dev",
-    link: "https://apps.apple.com/pt/app/notjustflows/id6744860073?l=en-GB",
-    images: ["https://files.rochanegra.com/projects/notjustflows-dashboard.png"],
-  },
+  // {
+  //   id: 3,
+  //   title: "NotJustFlows",
+  //   description: "Mobile-first AI agent that generates complex n8n automation workflows.",
+  //   challenge: "Creating sophisticated low-code automations (n8n) is time-consuming and requires deep knowledge of node structures and JSON transformations.",
+  //   solution: "Architected a React Native mobile application integrated with custom AI models to translate natural language prompts into ready-to-import n8n workflow JSONs.",
+  //   stack: ["React Native", "Supabase", "AI Models", "Expo"],
+  //   category: "Mobile",
+  //   status: "dev",
+  //   link: "https://apps.apple.com/pt/app/notjustflows/id6744860073?l=en-GB",
+  //   images: ["https://files.rochanegra.com/projects/notjustflows-dashboard.png"],
+  // },
   {
     id: 4,
     title: "Rocha Negra Life OS",
@@ -71,22 +80,27 @@ export const projects: Project[] = [
     solution: "Engineered a private enterprise-grade Life OS using a Spring Boot backend and NextJS frontend, centralizing personal productivity and encrypted financial data.",
     stack: ["Springboot", "NextJS", "Supabase", "PostgreSQL"],
     category: "SaaS",
-    status: "beta",
+    status: "dev",
     link: "http://dev.rochanegra.com",
-    images: ["https://files.rochanegra.com/projects/rochanegra-life-os-dashboard.png"],
+    github: "https://github.com/goncalo1995/rocha-negra",
+    images: [
+      "https://files.rochanegra.com/projects/rochanegra-home.png",
+      "https://files.rochanegra.com/projects/rochanegra-projects.png",
+      "https://files.rochanegra.com/projects/rochanegra-vehicles.png"
+    ],
   },
-  {
-    id: 5,
-    title: "Rebelco.pt",
-    description: "High-performance digital catalog for advanced industrial and ballistic materials.",
-    challenge: "Managing a complex inventory of hundreds of specialized materials with distinct technical specifications and data sheets in a searchable format.",
-    solution: "Designed and deployed a custom WordPress/PHP catalog system with advanced filtering and optimized asset delivery for heavy technical documentation.",
-    stack: ["WordPress", "PHP", "JavaScript", "MySQL"],
-    category: "Web",
-    status: "live",
-    link: "https://rebelco.pt",
-    images: ["https://files.rochanegra.com/projects/rebelco-dashboard.png"],
-  },
+  // {
+  //   id: 5,
+  //   title: "Rebelco.pt",
+  //   description: "High-performance digital catalog for advanced industrial and ballistic materials.",
+  //   challenge: "Managing a complex inventory of hundreds of specialized materials with distinct technical specifications and data sheets in a searchable format.",
+  //   solution: "Designed and deployed a custom WordPress/PHP catalog system with advanced filtering and optimized asset delivery for heavy technical documentation.",
+  //   stack: ["WordPress", "PHP", "JavaScript", "MySQL"],
+  //   category: "Web",
+  //   status: "live",
+  //   link: "https://rebelco.pt",
+  //   images: ["https://files.rochanegra.com/projects/rebelco-dashboard.png"],
+  // },
   {
     id: 6,
     title: "Munzua",
@@ -98,7 +112,11 @@ export const projects: Project[] = [
     status: "live",
     github: "https://github.com/goncalo1995/munzua",
     link: "https://munzua.com",
-    images: ["https://files.rochanegra.com/projects/munzua-dashboard.png"],
+    images: [
+      "https://files.rochanegra.com/projects/munzua-home.png?text=Homepage",
+      "https://files.rochanegra.com/projects/munzua-servicos.png?text=Services",
+      "https://files.rochanegra.com/projects/munzua-projetos.png?text=Projects"
+    ],
   },
   {
     id: 7,
@@ -106,11 +124,16 @@ export const projects: Project[] = [
     description: "Digital gallery and administrative CMS for a contemporary visual artist.",
     challenge: "The artist required a minimalist aesthetic that didn't compromise on powerful back-office management for artwork collections and subscribers.",
     solution: "Built a custom Headless CMS solution using NextJS and Supabase, allowing seamless management of high-resolution media and automated subscriber newsletters.",
-    stack: ["NextJS", "Supabase", "PostgreSQL", "Cloudinary"],
+    stack: ["NextJS", "Supabase", "PostgreSQL", "Cloudflare"],
     category: "Web",
     status: "live",
     link: "https://helenacolaco.com",
-    images: ["https://files.rochanegra.com/projects/helenacolaco-dashboard.png"],
+    github: "https://github.com/goncalo1995/lena-art",
+    images: [
+      "https://files.rochanegra.com/projects/lena-home.png?text=Homepage",
+      "https://files.rochanegra.com/projects/lena-contacts.png?text=Contacts",
+      "https://files.rochanegra.com/projects/lena-admin-media.png?text=Admin Media"
+    ],
   },
   {
     id: 8,
@@ -122,8 +145,29 @@ export const projects: Project[] = [
     category: "SaaS",
     status: "PoC",
     link: "https://beta.ausse.pt",
-    images: ["https://files.rochanegra.com/projects/ausse-dashboard.png"],
+    images: [
+      "https://files.rochanegra.com/projects/ausse-home.png?text=Homepage",
+      "https://files.rochanegra.com/projects/ausse-marketing.png?text=Marketing",
+      "https://files.rochanegra.com/projects/ausse-section-edit.png?text=Section Edit"
+    ],
   },
+  // {
+  //   id: 9,
+  //   title: "José António Santos",
+  //   description: "",
+  //   challenge: "",
+  //   solution: "",
+  //   stack: ["NextJS"],
+  //   category: "Web",
+  //   status: "live",
+  //   link: "https://helenacolaco.com",
+  //   github: "",
+  //   images: [
+  //     "https://files.rochanegra.com/projects/lena-home.png?text=Homepage",
+  //     "https://files.rochanegra.com/projects/lena-contacts.png?text=Contacts",
+  //     "https://files.rochanegra.com/projects/lena-admin-media.png?text=Admin Media"
+  //   ],
+  // },
 ];
 
 export const experiences: Experience[] = [

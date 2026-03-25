@@ -151,10 +151,10 @@ function PortfolioContent() {
                 <motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 }}
+                  transition={{ delay: 0.2 }}
                   className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
                 >
-                  <TypewriterText className="text-foreground">Gonçalo Cereja</TypewriterText>
+                  <TypewriterText className="text-foreground">Gonçalo Cereja Pereira</TypewriterText>
                 </motion.h1>
 
                 <motion.p
@@ -208,7 +208,7 @@ function PortfolioContent() {
                     onClick={() => handleNavigate("process")}
                     className="flex items-center gap-2 px-6 py-3 rounded-xl bg-cloud-blue text-white hover:bg-cloud-blue/90 transition-colors cursor-pointer"
                   >
-                    <Terminal className="w-5 h-5" />
+                    <Terminal className="w-5 h-5 hidden sm:block" />
                     <span>My Process</span>
                   </MagneticButton>
                   <CollaborateIcon onClick={() => handleNavigate("contact")} />
@@ -316,7 +316,7 @@ function PortfolioContent() {
                 <div className="glass p-6 rounded-2xl border border-border space-y-6 shadow-sm">
                   <div className="flex flex-row items-center justify-between">
                     <h4 className="text-sm font-mono text-muted-foreground w-full md:w-auto">Academic Foundation</h4>
-                    <span className="text-sm text-muted-foreground w-full md:w-auto">2013 — 2019</span>
+                    <span className="text-sm text-muted-foreground w-full md:w-auto text-right">2013 — 2019</span>
                   </div>
                   
                   <div className="flex flex-col md:flex-row gap-6 items-start">
@@ -376,7 +376,7 @@ function PortfolioContent() {
               <span className="text-xs font-mono uppercase tracking-wider text-amber-500 mb-4 block">
                 {"// "}Project Lab
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Work (Soon)</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Work</h2>
               <p className="text-muted-foreground max-w-xl mx-auto">
                 A selection of cloud architecture and fullstack projects demonstrating scalable solutions.
               </p>
@@ -402,7 +402,7 @@ function PortfolioContent() {
         {/* ===================== CONTACT SECTION ===================== */}
         <section
           id="contact"
-          className="min-h-screen flex items-center justify-center px-6 py-20"
+          className="min-h-screen flex items-center justify-center px-6 py-20 mb-16"
         >
           <div className="max-w-2xl mx-auto text-center">
             <motion.div

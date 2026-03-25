@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 import { navItems } from "@/data/portfolio"
-import { MagneticButton } from "./MagneticButton"
 
 interface MobileNavProps {
   activeSection: string
@@ -24,25 +23,19 @@ export function MobileNav({ activeSection, onNavigate }: MobileNavProps) {
           const isActive = activeSection === item.id
 
           return (
-            <MagneticButton
+            <button
               key={item.id}
               onClick={() => onNavigate(item.id)}
               className={cn(
                 "relative p-3 rounded-xl transition-colors",
                 isActive
-                  ? "bg-cloud-blue/20 text-cloud-blue"
+                  ? "bg-cloud-blue/20 text-cloud-blue" // Add the background directly to the button
                   : "text-muted-foreground hover:text-foreground hover:bg-secondary"
               )}
             >
               <Icon className="w-5 h-5" />
               <span className="sr-only">{item.label}</span>
-              {isActive && (
-                <motion.div
-                  layoutId="mobile-nav-indicator"
-                  className="absolute inset-0 rounded-xl bg-cloud-blue/10 -z-10"
-                />
-              )}
-            </MagneticButton>
+            </button>
           )
         })}
       </div>

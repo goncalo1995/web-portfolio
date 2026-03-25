@@ -172,7 +172,7 @@ export function ProjectLightbox({ project, onClose }: ProjectLightboxProps) {
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-cloud-blue text-white hover:bg-cloud-blue/90 transition-colors"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  View Live
+                  Open
                 </a>
               )}
               {project.github && (
@@ -183,7 +183,7 @@ export function ProjectLightbox({ project, onClose }: ProjectLightboxProps) {
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-lg glass hover:bg-secondary transition-colors"
                 >
                   <Github className="w-4 h-4" />
-                  Source Code
+                  Code
                 </a>
               )}
             </div>
