@@ -233,12 +233,13 @@ export const experiences: Experience[] = [
         role: "AI Solutions Engineer",
         description: {
           challenge:
-            "Needed to efficiently manage and extract structured data from diverse internal processes like call centers and knowledge bases.",
+            "Needed to efficiently manage and extract structured data from hundreds of daily calls and pre-evaluate them according to business needs.",
           solution:
-            "Developed customized AI solutions including voice recognition analysis, a role-based vector database for document queries, and a multi-language internal chatbot.",
-          impact: "Streamlined internal data retrieval and automated the structured analysis of call center operations.",
+            "Built an AI-powered call analysis system with voice recognition, dynamic prompts adapted to different call scripts, and a review interface with audio replay and augmented insights.",
+          impact:
+            "Transformed quality assurance from 5 random manual evaluations per operator to automatic analysis of 100% of calls, with human override capabilities ensuring accuracy.",
         },
-        technologies: ["AI", "LLMs", "Vector DB", "Speech Recognition", "Prompt Engineering"],
+        technologies: ["AI", "LLMs", "Vector DB", "Speech Recognition", "Azure"],
       },
       {
         id: "link-banking",
@@ -277,11 +278,11 @@ export const experiences: Experience[] = [
         role: "Full-stack Developer",
         description: {
           challenge:
-            "Needed to quickly launch an online vehicle sales platform, but building custom solutions per brand was costly and slow.",
+            "Hyundai needed to launch an online vehicle sales platform, but the client wanted robust, reusable code to enable faster rollouts for future brands.",
           solution:
-            "Helped with the development of the 'Click to Buy' platform using a generic Quarkus backend on AWS EKS and established a white-label Vue.js frontend library.",
+            "Developed the 'Click to Buy' platform using a generic Quarkus backend on AWS EKS and established a white-label Vue.js frontend library designed for multi-brand reuse.",
           impact:
-            "Kickstarted Hyundai's digital sales while dramatically reducing the time-to-market for onboarding future automotive brands.",
+            "Kickstarted Hyundai's digital sales while architecting the foundation for rapid onboarding of additional automotive brands.",
         },
         technologies: ["Vue.js", "Storybook", "Quarkus", "Java", "AWS EKS"],
       },
@@ -294,9 +295,9 @@ export const experiences: Experience[] = [
           challenge:
             "Wanted to replace the legacy website with a modern e-commerce platform focused on lead generation and trade-ins.",
           solution:
-            "Rapidly deployed a digital store utilizing the previously established 'White Label' Vue.js component library and generic backend infrastructure.",
+            "Leveraged the previously established white-label Vue.js component library and generic backend infrastructure to rapidly deploy a fully customized digital store.",
           impact:
-            "Successfully modernized the shopping experience, resulting in streamlined digital lead generation for used vehicles.",
+            "Successfully modernized the shopping experience in record time, validating the white-label architecture and streamlining digital lead generation for used vehicles.",
         },
         technologies: ["Vue.js", "Storybook", "Framework7", "Quarkus"],
       },
@@ -309,9 +310,9 @@ export const experiences: Experience[] = [
           challenge:
             "Client needed to manage dozens of distinct, complex business workflows without building custom UIs for each scenario.",
           solution:
-            "Created a comprehensive process portal featuring standalone components that dynamically generate complex forms and validation logic straight from JSON objects.",
+            "Built a dynamic process portal with multi-step forms, complex field dependencies, and backend automation for DUA forms, Excel reports, and custom Word documents — all driven by JSON configuration.",
           impact:
-            "Decreased the deployment time of new business workflows from months to days, creating immense operational flexibility.",
+            "Reduced workflow deployment from months to days, enabling rapid creation and updates of business processes with minimal development effort.",
         },
         technologies: ["Vue.js", "Java", "REST APIs"],
       },
@@ -322,11 +323,11 @@ export const experiences: Experience[] = [
         role: "Conversational AI Developer",
         description: {
           challenge:
-            "Citizens needed a seamless way to check customs clearances and book services across web and mobile platforms in two languages.",
+            "Employees needed quick access to import data and internal services across web and mobile platforms in English and Arabic.",
           solution:
-            "Implemented a responsive Oracle Digital Assistant chatbot in English and Arabic, deeply integrated with ADC's internal legacy systems via APIs.",
+            "Implemented an Oracle Digital Assistant chatbot enabling staff to search by product names or unique import codes, view detailed customs information, and reserve Teams meeting rooms directly in chat — fully integrated with internal legacy systems.",
           impact:
-            "Enhanced accessibility for citizens through 24/7 multi-language support and automated common booking workflows.",
+            "Boosted internal efficiency through 24/7 multi-language access to customs data and automated room bookings, deployed across both website and mobile app.",
         },
         technologies: ["Oracle Digital Assistant", "Chatbots", "Integrations"],
       },
